@@ -1,1 +1,18 @@
 @use "global" as *;
+
+.test1{
+    font-family: $base-font-family;
+    font-size: 24px;
+}
+
+.test2{
+    font-family: $second-font-family;
+    font-size: 24px;
+
+}
+
+.test3{
+    font-family: $third-font-family;
+    font-size: 24px;
+
+}

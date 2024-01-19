@@ -1,0 +1,70 @@
+@use 'global' as *;
+
+// ドロワーメニュー
+.drawer{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #408F95;
+    width: 100%;
+    height: 120vh;
+    transform: translateX(101%);
+    transition: transform 0.3s linear;
+    z-index: 40;
+    overflow: scroll;
+
+    @include mq('md'){
+        display: none;
+    }
+}
+
+.drawer.is-active{
+    transform: translateX(0);
+}
+
+.drawer__nav{
+    display: flex;
+    margin-top: calc(rem(80) + rem(24));
+}
+
+.drawer__nav-right{
+    margin-left: rem(7);
+}
+
+.drawer__nav-left .drawer__nav-items,
+.drawer__nav-right .drawer__nav-items{
+    margin-top: calc(rem(40) - rem(12));
+}
+
+.drawer__nav-left .drawer__nav-items:first-child,
+.drawer__nav-right .drawer__nav-items:first-child{
+    margin-top: 0;
+}
+
+.drawer__nav-link{
+    display: block;
+    color: $white;
+    font-weight: $normal;
+    font-size: rem(16);
+    line-height: 18px;
+    padding-top: rem(12);
+    padding-bottom: rem(12);
+    padding-left: rem(22);
+}
+
+.drawer__nav-link.drawer__nav-link--bold{
+    font-weight: $bold;
+    padding-top: 0;
+    position: relative;
+}
+
+.drawer__nav-link.drawer__nav-link--bold::before{
+    content: "";
+    width: rem(18);
+    height: rem(18);
+    background: url(../images/common/footer_starfish.png) no-repeat center center / contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+

@@ -1,0 +1,81 @@
+@use 'global' as *;
+
+.contact{
+    padding: rem(80) 0;
+}
+
+.contact__inner{
+
+}
+
+.contact__block{
+
+}
+
+.contact__information{
+
+}
+
+.contact__information-title{
+}
+
+.contact__information-title img{
+    max-width: rem(174);
+    width: 100%;
+    margin: auto;
+}
+
+.contact__information-wrap{
+    margin-top: rem(8);
+    padding-top: rem(16);
+    border-top: 1px solid $accent-color;
+    text-align: center;
+}
+
+.contact__address,
+.contact__tel,
+.contact__sales,
+.contact__holiday{
+    color: $font-color;
+    font-size: rem(16);
+    line-height: 24px;
+}
+
+.contact__tel,
+.contact__sales,
+.contact__holiday{
+    margin-top: rem(4);
+}
+
+.contact__map{
+    margin-top: rem(16);
+    aspect-ratio: 295 / 160;
+
+}
+
+.contact__map iframe{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.contact__content{
+    margin-top: rem(40);
+}
+
+.contact__title{
+
+}
+
+.contact__text{
+    margin-top: rem(8);
+    color: $accent-color;
+    text-align: center;
+    font-size: rem(14);
+    line-height: 18px;
+}
+
+.contact__button{
+    margin-top: rem(40);
+    text-align: center;
+}
