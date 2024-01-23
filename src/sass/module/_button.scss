@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     background-color: $accent-color;
-    padding: rem(16) rem(40);
+    padding: rem(16) rem(31) rem(16) rem(39);
     position: relative;
     z-index: 1;
 }
@@ -20,8 +20,9 @@
 }
 
 .button svg{
-    width: rem(40);
-    height: rem(6);
+    width: rem(56);
+    margin-top: rem(-5);
+    margin-left: rem(-7);
 }
 
 .button::before{

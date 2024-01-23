@@ -46,12 +46,14 @@
 }
 
 .header__logo img{
-    width: rem(102);
+    width: rem(109);
     height: auto;
     display: block;
+    margin-top: rem(4);
+    margin-left: rem(-2);
 
     @include mq('md'){
-        width: rem(133);
+        width: rem(142);
     }
 }
 

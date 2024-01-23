@@ -19,7 +19,7 @@
 }
 
 .campaign__card-wrap{
-    margin-top: rem(24);
+    margin-top: rem(18);
     margin-right: calc(50% - 50vw);
 
     @include mq('md'){
@@ -28,18 +28,49 @@
 }
 
 .campaign__swiper{
-    padding: 10px;
+    padding: rem(10);
+    margin-left: rem(-10);
+    
+    @include mq('md'){
+        padding: rem(105) rem(10) rem(10);
+        margin-top: rem(-105);
+    }
+}
+
+.campaign-next,
+.campaign-prev{
+    
+    @include mq('md'){
+        width: rem(80);
+        height: rem(80);
+    }
+}
+
+
+.campaign-next{
 
     @include mq('md'){
-        
+        background: url(../images/common/arrow_right.svg)no-repeat center center / contain;
+        right: rem(180);
+        top: 0;
+    }
+}
+
+.campaign-prev{
+    
+    @include mq('md'){
+        background: url(../images/common/arrow-left.svg)no-repeat center center / contain;
+        left: calc(50% + rem(215));
+        top: 0;
     }
 }
 
 .campaign__button{
-    margin-top: rem(40);
+    margin-top: rem(30);
     text-align: center;
+    margin-left: rem(-5);
 
     @include mq('md'){
-        margin-top: rem(80);
+        margin-top: rem(69);
     }
 }

@@ -3,8 +3,12 @@
 .mv{
     position: relative;
     z-index: 1;
-    height: 100vh;
-    min-height: rem(600);
+    // height: 100vh;
+    min-height: rem(667);
+
+    @include mq('md'){
+        min-height: rem(768);
+    }
 }
 
 .mv__inner{
@@ -14,11 +18,15 @@
 
 .mv__title-wrap{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: calc(50% - rem(47));
+    left: calc(50% - rem(177));
     z-index: 2;
     width: 100%;
+
+    @include mq('md'){
+        top: calc(50% - rem(65));
+        left: calc(50% - rem(700));
+    }
 }
 
 .mv__title{
@@ -28,6 +36,12 @@
     font-size: rem(40);
     letter-spacing: 21.6px;
     text-align: center;
+
+    @include mq('md'){
+        font-size: rem(80);
+        line-height: 100px; 
+        letter-spacing: 42px;
+    }
 }
 
 .mv__sub-title{
@@ -35,13 +49,24 @@
     font-family: $third-font-family;
     font-size: rem(20);
     text-align: center;
+    margin-top: rem(2);
+    margin-left: rem(-41);
+
+    @include mq('md'){
+        
+    }
 }
 
 .mv__swiper,
 .mv__swiper .mv__image,
 .mv__swiper .mv__image img{
-    height: 100vh;
-    min-height: inherit;
+    // height: 100vh;
+    min-height: rem(667);
+
+    @include mq('md'){
+        min-height: rem(768);
+        
+    }
 }
 
 .mv__swiper .mv__image img{
