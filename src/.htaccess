@@ -1,0 +1,7 @@
+AuthUserFile /home/haru522/hana-coco.net/public_html/.htpasswd
+AuthName "Input your ID and Password."
+AuthType Basic
+require valid-user
+<Files ~ "^\.ht( passwd|access)$">
+    deny from all
+</Files>
