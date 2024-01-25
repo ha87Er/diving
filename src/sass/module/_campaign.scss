@@ -51,7 +51,7 @@
 
     @include mq('md'){
         background: url(../images/common/arrow_right.svg)no-repeat center center / contain;
-        right: rem(180);
+        right: calc(50% - rem(456));
         top: 0;
     }
 }

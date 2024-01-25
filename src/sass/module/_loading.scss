@@ -1,0 +1,151 @@
+@use 'global' as *;
+
+  #loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    min-height: rem(667);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    overflow: hidden;
+
+    @include mq('md'){
+      min-height: rem(768);
+    }
+  }
+
+  .loading__title-wrap{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    @include mq('md'){
+
+    }
+}
+
+  .loading__title{
+    display: block;
+    color: $accent-color;
+    font-weight: $normal;
+    font-family: $fourth-font-family;
+    font-size: rem(40);
+    letter-spacing: 21.6px;
+    width: 100%;
+    margin-left: rem(10);
+    line-height: 1;
+    
+
+    @include mq('md'){
+        font-size: rem(80);
+        line-height: 100px;
+        letter-spacing: 42px;
+        margin-left: rem(20);
+    }
+}
+
+.loading__sub-title{
+  display: block;
+    color: $accent-color;
+    font-family: $third-font-family;
+    font-size: rem(20);
+    margin-top: 7px;
+
+    @include mq('md'){
+        
+    }
+}
+
+  .loading__cover {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: rem(667);
+    z-index: 100;
+
+    @include mq('md'){
+      min-height: rem(768);
+    }
+  }
+
+  .loading__cover-left,
+  .loading__cover-right {
+    height: 100vh;
+    min-height: rem(667);
+    width: 50%;
+    display: none;
+
+    @include mq('md'){
+      min-height: rem(768);
+    }
+  }
+
+  .loading__cover-left.is-active,
+  .loading__cover-right.is-active {
+    position: absolute;
+    top: 100%;
+    display: block;
+
+    @include mq('md'){
+      min-height: rem(768);
+    }
+}
+
+  .loading__cover-left {
+    left: 0;
+    animation: moveLeft 2s linear forwards;
+    animation-delay: 1s;
+  }
+
+  .loading__cover-right {
+    right: 0;
+    animation: moveRight 2.2s linear forwards;
+    animation-delay: 1.2s;
+  }
+
+  .loading__cover-left img,
+  .loading__cover-right img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .loading__cover-left img{
+    object-position: right;
+  }
+
+  .loading__cover-right img{
+    object-position: left;
+    margin-left: -1px;
+
+  }
+
+  @keyframes moveLeft {
+    0% {
+        top: calc(100% - 80px);
+    }
+    100% {
+      top: 0;
+    }
+  }
+
+  @keyframes moveRight {
+    0% {
+        top: 100%;
+    }
+    100% {
+      top: 0;
+    }
+    }
+
+

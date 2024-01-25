@@ -11,13 +11,13 @@
   <meta name="keywords" content="" />
   <!-- ogp -->
   <meta property="og:title" content="(仮)DIVING" />
-  <meta property="og:type" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hana-coco.net" />
+  <meta property="og:image" content="https://hana-coco.net/assets/images/common/main-visual.jpg" />
   <meta property="og:site_name" content="(仮)DIVING" />
   <meta property="og:description" content="(仮)DIVINGでは、初心者から上級者まで、幅広いレベルのダイバーに対応したプログラムをご用意しています。プロのインストラクターが丁寧にサポートし、安心してダイビングの世界を楽しんでいただけます。透明度抜群の海で、カラフルな海洋生物たちとの出会いをお楽しみください。" />
   <!-- ファビコン -->
-  <link rel="”icon”" href="" />
+  <link rel="”icon”" href="#" />
   <!-- css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="./assets/css/style.css" />
@@ -35,23 +35,41 @@
 </head>
 <body>
   <div class="wrap">
+
+  <div id="loading">
+    <div class="loading__title-wrap">
+      <div class="loading__title loading__title--green">DIVING</div>
+      <p class="loading__sub-title loading__sub-title--green">into the ocean</p>
+    </div>
+    <div class="loading__cover">
+      <picture class="loading__cover-left">
+        <source srcset="./assets/images/common/mv-left.jpg" media="(min-width: 768px)" type="image/png">
+        <img src="./assets/images/common/mv-left_sp.jpg" alt="左半分：海で泳ぐかめ">
+      </picture>
+      <picture class="loading__cover-right">
+        <source srcset="./assets/images/common/mv-right.jpg" media="(min-width: 768px)" type="image/png">
+        <img src="./assets/images/common/mv-right_sp.jpg" alt="右半分：海で泳ぐかめ">
+      </picture>
+    </div>
+  </div>
+
   <header class="header">
     <div class="header__inner inner">
-      <h1 class="header__logo">
+      <div class="header__logo">
         <a href="/">
           <img src="./assets/images/common/logo.svg" alt="CodeUps">
         </a>
-      </h1>
+      </div>
       <nav class="header__nav">
         <ul class="header__nav-items">
-          <li class="header__nav-item"><a href="#about" class="header__nav-link">Campaign<span>キャンペーン</span></a></li>
-          <li class="header__nav-item"><a href="#how-to-use" class="header__nav-link">About us<span>私たちについて</span></a></li>
-          <li class="header__nav-item"><a href="#merit" class="header__nav-link">Information<span>ダイビング情報</span></a></li>
-          <li class="header__nav-item"><a href="#merit" class="header__nav-link">Blog<span>ブログ</span></a></li>
-          <li class="header__nav-item"><a href="#merit" class="header__nav-link">Voice<span>お客様の声</span></a></li>
-          <li class="header__nav-item"><a href="#merit" class="header__nav-link">Price<span>料金一覧</span></a></li>
-          <li class="header__nav-item"><a href="#merit" class="header__nav-link">FAQ<span>よくある質問</span></a></li>
-          <li class="header__nav-item"><a href="#merit" class="header__nav-link">Contact<span>お問合せ</span></a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Campaign<span>キャンペーン</span></a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">About us<span>私たちについて</span></a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Information<span>ダイビング情報</span></a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Blog<span>ブログ</span></a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Voice<span>お客様の声</span></a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Price<span>料金一覧</span></a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">FAQ<span>よくある質問</span></a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Contact<span>おい問わ合せ</span></a></li>
         </ul>
       </nav>
       <button class="header__bars js-hamburger">
@@ -66,7 +84,7 @@
         <nav class="drawer__nav">
           <div class="drawer__nav-left">
             <ul class="drawer__nav-items">
-              <li class="drawer__nav-item"><a href="#campaign" class="drawer__nav-link drawer__nav-link--bold">キャンペーン</a></li>
+              <li class="drawer__nav-item"><a href="#" class="drawer__nav-link drawer__nav-link--bold">キャンペーン</a></li>
               <li class="drawer__nav-item"><a href="#" class="drawer__nav-link">ライセンス取得</a></li>
               <li class="drawer__nav-item"><a href="#" class="drawer__nav-link">貸切体験ダイビング</a></li>
               <li class="drawer__nav-item"><a href="#" class="drawer__nav-link">ナイトダイビング</a></li>
@@ -81,30 +99,30 @@
               <li class="drawer__nav-item"><a href="#" class="drawer__nav-link">ファンダイビング</a></li>
             </ul>
             <ul class="drawer__nav-items">
-              <li class="drawer__nav-item"><a href="#blog" class="drawer__nav-link drawer__nav-link--bold">ブログ</a></li>
+              <li class="drawer__nav-item"><a href="#" class="drawer__nav-link drawer__nav-link--bold">ブログ</a></li>
             </ul>
           </div>
           <div class="drawer__nav-right">
             <ul class="drawer__nav-items">
-              <li class="drawer__nav-item"><a href="#blog" class="drawer__nav-link drawer__nav-link--bold">お客様の声</a></li>
+              <li class="drawer__nav-item"><a href="#" class="drawer__nav-link drawer__nav-link--bold">お客様の声</a></li>
             </ul>
             <ul class="drawer__nav-items">
-              <li class="drawer__nav-item"><a href="#blog" class="drawer__nav-link drawer__nav-link--bold">料金一覧</a></li>
-              <li class="drawer__nav-item"><a href="#blog" class="drawer__nav-link">ライセンス講習</a></li>
-              <li class="drawer__nav-item"><a href="#blog" class="drawer__nav-link">体験ダイビング</a></li>
-              <li class="drawer__nav-item"><a href="#blog" class="drawer__nav-link">ファンダイビング</a></li>
+              <li class="drawer__nav-item"><a href="#" class="drawer__nav-link drawer__nav-link--bold">料金一覧</a></li>
+              <li class="drawer__nav-item"><a href="#" class="drawer__nav-link">ライセンス講習</a></li>
+              <li class="drawer__nav-item"><a href="#" class="drawer__nav-link">体験ダイビング</a></li>
+              <li class="drawer__nav-item"><a href="#" class="drawer__nav-link">ファンダイビング</a></li>
             </ul>
             <ul class="drawer__nav-items">
-              <li><a href="#blog" class="drawer__nav-link drawer__nav-link--bold">よくある質問</a></li>
+              <li><a href="#" class="drawer__nav-link drawer__nav-link--bold">よくある質問</a></li>
             </ul>
             <ul class="drawer__nav-items">
-              <li><a href="#blog" class="drawer__nav-link drawer__nav-link--bold">プライバシー<br>ポリシー</a></li>
+              <li><a href="#" class="drawer__nav-link drawer__nav-link--bold">プライバシー<br>ポリシー</a></li>
             </ul>
             <ul class="drawer__nav-items">
-              <li><a href="#blog" class="drawer__nav-link drawer__nav-link--bold">利用規約</a></li>
+              <li><a href="#" class="drawer__nav-link drawer__nav-link--bold">利用規約</a></li>
             </ul>
             <ul class="drawer__nav-items">
-              <li><a href="#blog" class="drawer__nav-link drawer__nav-link--bold">おい問わ合せ</a></li>
+              <li><a href="#" class="drawer__nav-link drawer__nav-link--bold">おい問わ合せ</a></li>
             </ul>
           </div>
         </nav>
@@ -157,9 +175,9 @@
     </div>
     <div class="campaign__card-wrap">
       <div class="swiper campaign__swiper js-campaign-swiper">
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper campaign__card">
           <div class="swiper-slide">
-            <div class="campaign__card campaign-card">
+            <a href="#" class="campaign-card">
               <div class="campaign-card__image">
                 <img src="./assets/images/common/campaign_img1.jpg" alt="水槽に黄色と黒の縞模様の熱帯魚がたくさん泳いでいる">
               </div>
@@ -172,10 +190,10 @@
                   <p class="campaign-card__price-after">¥46,000</p>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
           <div class="swiper-slide">
-            <div class="campaign__card campaign-card">
+            <a href="#" class="campaign-card">
               <div class="campaign-card__image">
                 <img src="./assets/images/common/campaign_img2.jpg" alt="山が見える透明度が高い綺麗な海に船が２隻浮かんでいる">
               </div>
@@ -188,10 +206,10 @@
                   <p class="campaign-card__price-after">¥18,000</p>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
           <div class="swiper-slide">
-            <div class="campaign__card campaign-card">
+            <a href="#" class="campaign-card">
               <div class="campaign-card__image">
                 <img src="./assets/images/common/campaign_img3.jpg" alt="たくさんのクラゲが照明の暗い水槽を泳いでいる">
               </div>
@@ -204,10 +222,10 @@
                   <p class="campaign-card__price-after">¥8,000</p>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
           <div class="swiper-slide">
-            <div class="campaign__card campaign-card">
+            <a href="#" class="campaign-card">
               <div class="campaign-card__image">
                 <img src="./assets/images/common/campaign_img4.jpg" alt="仲間たちとダイビングをする姿">
               </div>
@@ -220,7 +238,7 @@
                   <p class="campaign-card__price-after">¥16,000</p>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       <div class="swiper-button-next campaign-next js-campaign-next"></div>
@@ -228,10 +246,10 @@
       </div>
     </div>
     <div class="campaign__button">
-      <a href="" class="button">
+      <a href="#" class="button">
         <p>View more</p>
         <svg width="42" height="8" viewBox="0 0 42 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path id="Vector 4" d="M1 7H41L34 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+          <path class="Vector 4" d="M1 7H41L34 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </a>
     </div>
@@ -255,7 +273,7 @@
           <a href="" class="button">
             <p>View more</p>
             <svg width="42" height="8" viewBox="0 0 42 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path id="Vector 4" d="M1 7H41L34 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="Vector 4" d="M1 7H41L34 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </a>
         </div>
@@ -284,10 +302,10 @@
           正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。
         </p>
         <div class="information__button">
-          <a href="" class="button">
+          <a href="#" class="button">
             <p>View more</p>
             <svg width="42" height="8" viewBox="0 0 42 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path id="Vector 4" d="M1 7H41L34 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="Vector 4" d="M1 7H41L34 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </a>
         </div>
@@ -307,7 +325,7 @@
       <span class="title-ja">ブログ</span>
     </div>
     <div class="blog__items">
-      <div class="blog__item">
+      <a href="#" class="blog__item">
         <div class="blog__image">
           <img src="./assets/images/common/blog_img1.jpg" alt="赤色の珊瑚礁">
         </div>
@@ -319,8 +337,8 @@
             ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
           </p>
         </div>
-      </div>
-      <div class="blog__item">
+      </a>
+      <a href="#" class="blog__item">
         <div class="blog__image">
           <img src="./assets/images/common/blog_img2.jpg" alt="海の中を泳ぐウミガメ">
         </div>
@@ -332,8 +350,8 @@
             ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
           </p>
         </div>
-      </div>
-      <div class="blog__item">
+      </a>
+      <a href="#" class="blog__item">
         <div class="blog__image">
           <img src="./assets/images/common/blog_img3.jpg" alt="珊瑚礁に隠れるカクレクマノミ">
         </div>
@@ -345,13 +363,13 @@
             ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
           </p>
         </div>
-      </div>
+      </a>
     </div>
     <div class="blog__button">
-      <a href="" class="button">
+      <a href="#" class="button">
         <p>View more</p>
         <svg width="42" height="8" viewBox="0 0 42 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path id="Vector 4" d="M1 7H41L34 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+          <path class="Vector 4" d="M1 7H41L34 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </a>
     </div>
@@ -368,7 +386,7 @@
       <span class="title-ja">お客様の声</span>
     </div>
     <div class="voice__items">
-      <div class="voice__item">
+      <a href="#" class="voice__item">
         <div class="voice__head">
           <div class="voice__content">
             <div class="voice__meta">
@@ -386,8 +404,8 @@
             ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
             ここにテキストが入ります。ここにテキストが入ります。</p>
         </div>
-      </div>
-      <div class="voice__item">
+      </a>
+      <a href="#" class="voice__item">
         <div class="voice__head">
           <div class="voice__content">
             <div class="voice__meta">
@@ -405,13 +423,13 @@
             ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
             ここにテキストが入ります。ここにテキストが入ります。</p>
         </div>
-      </div>
+      </a>
     </div>
     <div class="voice__button">
       <a href="" class="button">
         <p>View more</p>
         <svg width="42" height="8" viewBox="0 0 42 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path id="Vector 4" d="M1 7H41L34 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+          <path class="Vector 4" d="M1 7H41L34 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </a>
     </div>
@@ -516,7 +534,7 @@
       <a href="" class="button">
         <p>View more</p>
         <svg width="42" height="8" viewBox="0 0 42 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path id="Vector 4" d="M1 7H41L34 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+          <path class="Vector 4" d="M1 7H41L34 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </a>
     </div>
@@ -549,14 +567,14 @@
         <div class="contact__content-wrap">
           <div class="contact__title">
             <h2 class="title-en title-accent--large"><span class="title-accent">C</span>ontact</h2>
-            <span class="title-ja title-accent--large">お問合せ</span>
+            <span class="title-ja title-accent--large">お問い合わせ</span>
           </div>
           <p class="contact__text">ご予約・お問い合わせはコチラ</p>
           <div class="contact__button">
             <a href="" class="button">
               <p>Contact us</p>
               <svg width="42" height="8" viewBox="0 0 42 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path id="Vector 4" d="M1 7H41L34 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="Vector 4" d="M1 7H41L34 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </a>
           </div>
@@ -576,10 +594,10 @@
         <img src="./assets/images/common/logo-white.svg" alt="CodeUps">
       </div>
       <div class="footer__sns">
-        <a class="footer__facebook">
+        <a href="#" class="footer__facebook">
           <img src="./assets/images/common/facebook.png" alt="facebookアイコン">
         </a>
-        <a class="footer__instagram">
+        <a href="#" class="footer__instagram">
           <img src="./assets/images/common/instagram.png" alt="instagramアイコン">
         </a>
       </div>
@@ -605,34 +623,34 @@
             <li class="footer__nav-item"><a href="#" class="footer__nav-link">ファンダイビング</a></li>
           </ul>
           <ul class="footer__nav-items">
-            <li class="footer__nav-item"><a href="#blog" class="footer__nav-link footer__nav-link--bold">ブログ</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link footer__nav-link--bold">ブログ</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__nav-right">
         <div class="footer__nav-wrap">
           <ul class="footer__nav-items">
-            <li class="footer__nav-item"><a href="#blog" class="footer__nav-link footer__nav-link--bold">お客様の声</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link footer__nav-link--bold">お客様の声</a></li>
           </ul>
           <ul class="footer__nav-items">
-            <li class="footer__nav-item"><a href="#blog" class="footer__nav-link footer__nav-link--bold">料金一覧</a></li>
-            <li class="footer__nav-item"><a href="#blog" class="footer__nav-link">ライセンス講習</a></li>
-            <li class="footer__nav-item"><a href="#blog" class="footer__nav-link">体験ダイビング</a></li>
-            <li class="footer__nav-item"><a href="#blog" class="footer__nav-link">ファンダイビング</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link footer__nav-link--bold">料金一覧</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">ライセンス講習</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">体験ダイビング</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">ファンダイビング</a></li>
           </ul>
         </div>
         <div class="footer__nav-wrap">
           <ul class="footer__nav-items">
-            <li><a href="#blog" class="footer__nav-link footer__nav-link--bold">よくある質問</a></li>
+            <li><a href="#" class="footer__nav-link footer__nav-link--bold">よくある質問</a></li>
           </ul>
           <ul class="footer__nav-items">
-            <li><a href="#blog" class="footer__nav-link footer__nav-link--bold">プライバシー<br class="u-mobile">ポリシー</a></li>
+            <li><a href="#" class="footer__nav-link footer__nav-link--bold">プライバシー<br class="u-mobile">ポリシー</a></li>
           </ul>
           <ul class="footer__nav-items">
-            <li><a href="#blog" class="footer__nav-link footer__nav-link--bold">利用規約</a></li>
+            <li><a href="#" class="footer__nav-link footer__nav-link--bold">利用規約</a></li>
           </ul>
           <ul class="footer__nav-items">
-            <li><a href="#blog" class="footer__nav-link footer__nav-link--bold">おい問わ合せ</a></li>
+            <li><a href="#" class="footer__nav-link footer__nav-link--bold">お問い合わせ</a></li>
           </ul>
         </div>
       </div>

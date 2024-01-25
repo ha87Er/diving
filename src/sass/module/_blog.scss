@@ -28,7 +28,7 @@
     margin-top: rem(28);
     display: flex;
     flex-direction: column;
-    gap: rem(40);
+    gap: rem(39);
 
     @include mq('md'){
         flex-direction: row;
@@ -93,7 +93,7 @@
 }
 
 .blog__button{
-    margin-top: rem(36);
+    margin-top: rem(40);
     margin-left: rem(-4);
     text-align: center;
 

@@ -21,7 +21,8 @@ const mainVisualSwiper = new Swiper('.js-mv-swiper', {
     autoplay: {
         delay: 3500, // 途切れなくループ
         disableOnInteraction: false, // 自動再生を止めない
-    }
+    },
+
   });
 
 //キャンペーン　スライダー
@@ -41,9 +42,20 @@ const campaignSwiper = new Swiper(".js-campaign-swiper", {
      //Responsive Breakpoint
      breakpoints:{
       768:{
+        slidesPerView: 2.5,
+        spaceBetween: 24, // スライド間のスペース
+      },
+
+      900:{
+        slidesPerView: 3.15,
+        spaceBetween: 24, // スライド間のスペース
+      },
+
+      1200:{
         slidesPerView: 3.45,
         spaceBetween: 40, // スライド間のスペース
       }
+
     }
   });
 
@@ -117,5 +129,33 @@ box.each(function(){
      });
 });
 
+//ローディングアニメーション
+$(document).ready(function() {
+  // ページが読み込まれてから0.5秒後にクラスを追加
+  setTimeout(function() {
+    $(".loading__cover-left, .loading__cover-right").addClass("is-active");
+  }, 500);
+
+  // .loading__cover-left読み込み後に発火
+  $(".loading__cover-left").on("animationend", function() {
+    setTimeout(function() {
+      $(".loading__title-wrap").css("z-index", 2002);
+      $(".loading__title, .loading__sub-title").fadeIn(2000).css("color", "#fff");
+    }, 800);
+  });
+
+  // .loading__cover-right読み込み後に発火
+  $(".loading__cover-right").on("animationend", function() {
+    $(".loading__title, .loading__sub-title").fadeOut(500);
+  });
+
+  // ページが読み込まれてから5秒後にloadingを非表示にする
+  setTimeout(function() {
+    $("#loading").fadeOut(2000);
+  }, 7000);
+});
+
+
 
 });
+

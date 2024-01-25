@@ -151,6 +151,10 @@
     position: absolute;
     top:0;
     left: 0;
+
+    @include mq('md'){
+        width: rem(32);
+    }
 }
 
 .header__bar:nth-child(1){
@@ -161,13 +165,23 @@
     top: rem(12);
 }
 
+.header__bars.is-active{
+    width: rem(40);
+    height: rem(24);
+}
+
+.header__bars.is-active .header__bar{
+    width: rem(40);
+}
+
 .header__bar:nth-child(3){
     top: rem(24);
 }
 
 .header__bars.is-active .header__bar:nth-child(1){
     top: rem(12);
-    transform: rotate(30deg);
+    left: rem(4);
+    transform: rotate(37deg);
 }
 
 .header__bars.is-active .header__bar:nth-child(2){
@@ -176,6 +190,9 @@
 
 .header__bars.is-active .header__bar:nth-child(3){
     top: rem(12);
-    transform: rotate(-30deg);
+    left: rem(4);
+    transform: rotate(-37deg);
 }
+
+
 

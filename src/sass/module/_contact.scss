@@ -68,7 +68,6 @@
     @include mq('md'){
         margin-top: rem(24);
         display: flex;
-        gap: rem(21);
     }
 }
 
@@ -79,7 +78,7 @@
     @include mq('md'){
         margin-top: 0;
         text-align: left;
-        width: calc(100% - rem(293));
+        width: 38%;
     }
 }
 
@@ -104,7 +103,7 @@
 }
 
 .contact__map{
-    max-width: rem(295);
+    width: rem(295);
     margin: rem(16) auto 0;
     aspect-ratio: 295 / 160;
     box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
@@ -112,9 +111,10 @@
 
     @include mq('md'){
         margin-top: 0;
-        width: rem(273);
         aspect-ratio: 273 / 148;
         box-shadow: none;
+
+        width: 62%;
     }
 }
 
