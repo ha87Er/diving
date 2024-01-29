@@ -2,6 +2,8 @@
 
 .campaign{
     margin-top: rem(40);
+    overflow: hidden;
+    padding-bottom: rem(4);
 
     @include mq('md'){
         margin-top: rem(120);
@@ -9,8 +11,12 @@
 }
 
 .campaign__inner{
+    max-width: calc(rem(600) + calc(rem(15) * 2));
+    width: 100%;
+    margin: auto;
 
     @include mq('md'){
+        width: 100%;
     }
 }
 
@@ -30,6 +36,7 @@
 .campaign__swiper{
     padding: rem(10);
     margin-left: rem(-10);
+    display: flex;
     
     @include mq('md'){
         padding: rem(105) rem(10) rem(10);
@@ -37,12 +44,22 @@
     }
 }
 
+.campaign__card{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    flex-grow: 1;
+}
+
 .campaign-next,
 .campaign-prev{
     
     @include mq('md'){
+        top: 0;
         width: rem(80);
         height: rem(80);
+        border: 1px solid $accent-color;
+        border-radius: 50%;
     }
 }
 
@@ -50,19 +67,59 @@
 .campaign-next{
 
     @include mq('md'){
-        background: url(../images/common/arrow_right.svg)no-repeat center center / contain;
         right: calc(50% - rem(456));
-        top: 0;
     }
 }
 
 .campaign-prev{
     
     @include mq('md'){
-        background: url(../images/common/arrow-left.svg)no-repeat center center / contain;
-        left: calc(50% + rem(215));
-        top: 0;
+        left: calc(50% + rem(216));
     }
+}
+
+.campaign-next:before{
+    
+    @include mq('md'){
+        display: block;
+        position: absolute;
+        content: "";
+        top: calc(50% - 5px);
+        right: rem(20);
+        width: rem(40);
+        height: rem(6);
+        border-right: 2px solid $accent-color;
+        border-bottom: 1px solid $accent-color;
+        transform: skew(45deg);
+        transition: .3s;
+    }
+}
+
+.campaign-next:hover:before{
+    right: rem(12);
+    width: rem(48);
+}
+
+.campaign-prev:before{
+    
+    @include mq('md'){
+        display: block;
+        position: absolute;
+        content: "";
+        top: calc(50% - 5px);
+        left: rem(20);
+        width: rem(40);
+        height: rem(6);
+        border-left: 2px solid $accent-color;
+        border-bottom: 1px solid $accent-color;
+        transform: skew(-45deg);
+        transition: .3s;
+    }
+}
+
+.campaign-prev:hover:before{
+    left: rem(12);
+    width: rem(48);
 }
 
 .campaign__button{

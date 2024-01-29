@@ -17,36 +17,40 @@
     align-items: center;
     justify-content: space-between;
     height: inherit;
+    padding-left: rem(15);
+    padding-right: rem(15);
 
     @include mq('md'){
+        padding-left: rem(25);
+        padding-right: calc(rem(25) - rem(5));
         width: 100%;
     }
 }
 
-.header__inner.inner{
-    
-    @include mq('md'){
-        max-width: calc(rem(1440) + rem(40) * 2);
-        padding-right: rem(40);
-        padding-left: rem(40);
-    }
+.header__nav{
+    height: inherit;
 }
 
-.header__logo{
+.header__logo-link{
     height: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     z-index: 50;
-}
+    max-width: rem(105);
+    width: 100%;
 
-.header__logo{
-    height: inherit;
+    @include mq('md'){
+        max-width: rem(150);
+        padding-top: rem(10);
+        padding-left: rem(13);
+    }
 }
 
 .header__logo img{
-    width: rem(109);
+    max-width: rem(150);
+    width: 100%;
     height: auto;
     display: block;
     margin-top: rem(4);
@@ -59,36 +63,36 @@
 
 .header__nav-items{
     display: none;
+    height: inherit;
 
     @include mq('md'){
-        height: inherit;
         display: flex;
         align-items: center;
-        gap: rem(40);
     }
 }
 
 .header__nav-item{
-
+    height: inherit;
     @include mq('md'){
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: inherit;
+
     }
 }
 
 .header__nav-link{
+    height: inherit;
 
     @include mq('md'){
-        display: block;
-        height: inherit;
         color: $white;
         font-size: rem(18);
         line-height: 18px;
         font-family: $third-font-family;
-        text-align: center;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: rem(20);
+        padding-right: rem(20);
     }
 }
 
@@ -104,26 +108,18 @@
     }
 }
 
-.header__nav-link:hover{
-
-    @include mq('md'){
-
-    }
-}
-
 .header__nav-link::after{
 
     @include mq('md'){
         content: '';
         position: absolute;
-        bottom: rem(-10);
+        bottom: rem(15);
         left: 10%;
+        transform: scale(0, 1);
         width: 80%;
         height: 2px;
         background:$white;
         transition: all .3s;
-        transform: scale(0, 1);
-        transform-origin: center top;
     }
 }
 

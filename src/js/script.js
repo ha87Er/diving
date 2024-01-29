@@ -27,11 +27,10 @@ const mainVisualSwiper = new Swiper('.js-mv-swiper', {
 
 //キャンペーン　スライダー
 const campaignSwiper = new Swiper(".js-campaign-swiper", {
-    loop: true, //ループさせる
-    slidesPerView: 1.23, //一度に表示させる枚数
-    centeredSlides : false, //アクティブなスライドを中央にしない
+    slidesPerView: 'auto', //スライドの枚数を自動調節
     spaceBetween: 24, // スライド間のスペース
     allowTouchMove: true, // スワイプ有効
+    grabCursor: true, //スライドをつかむ仕草
 
     // Navigation arrows
     navigation: {
@@ -41,18 +40,8 @@ const campaignSwiper = new Swiper(".js-campaign-swiper", {
   
      //Responsive Breakpoint
      breakpoints:{
-      768:{
-        slidesPerView: 2.5,
-        spaceBetween: 24, // スライド間のスペース
-      },
-
-      900:{
-        slidesPerView: 3.15,
-        spaceBetween: 24, // スライド間のスペース
-      },
-
-      1200:{
-        slidesPerView: 3.45,
+    
+      1000:{
         spaceBetween: 40, // スライド間のスペース
       }
 

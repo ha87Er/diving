@@ -1,8 +1,19 @@
 @use 'global' as *;
 
 .campaign-card{
-    display: block;
+    display: flex;
+    flex-direction: column;
     box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+    width: rem(280);
+    transition: all  0.3s ease;
+
+    @include mq('md'){
+        width: rem(333);
+    }
+}
+
+.campaign-card:hover{
+    opacity: 0.7;
 }
 
 .campaign-card__image{
@@ -26,8 +37,12 @@
 }
 
 .campaign-card__body{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     background-color: $white;
     padding: rem(16) rem(16) rem(24) rem(16);
+    width: 100%;
 
     @include mq('md'){
         padding: rem(24) rem(16) rem(40);
@@ -56,6 +71,7 @@
     line-height: 24px;
     padding-bottom: rem(8);
     border-bottom: 1px solid $accent-color;
+    flex-grow: 1;
 }
 
 .campaign-card__text{
@@ -79,7 +95,6 @@
     justify-content: center;
 
     @include mq('md'){
-        // margin-left: rem(18);
     }
 }
 
@@ -98,8 +113,8 @@
 
 .campaign-card__price-before span{
     text-decoration:line-through;
-    text-decoration-color:#C94800;/*線の色を指定*/
-    text-decoration-style:solid;/*線のスタイルを指定*/
+    text-decoration-color:#C94800;
+    text-decoration-style:solid;
     text-decoration-thickness: 3px;
 }
 

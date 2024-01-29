@@ -36,16 +36,15 @@
     font-family: $fourth-font-family;
     font-size: rem(40);
     letter-spacing: 21.6px;
-    width: 100%;
-    margin-left: rem(10);
     line-height: 1;
+    padding-left: 20px;
 
 
     @include mq('md'){
         font-size: rem(80);
-        line-height: 100px; 
+        line-height: 100px;
         letter-spacing: 42px;
-        margin-left: rem(20);
+        padding-left: rem(43);
     }
 }
 
@@ -53,11 +52,8 @@
     color: $white;
     font-family: $third-font-family;
     font-size: rem(20);
-    margin-top: 7px;
+    margin-top: rem(6);
 
-    @include mq('md'){
-        
-    }
 }
 
 .mv__swiper,
@@ -68,7 +64,6 @@
 
     @include mq('md'){
         min-height: rem(768);
-        
     }
 }
 

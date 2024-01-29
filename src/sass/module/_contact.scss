@@ -5,13 +5,25 @@
     position: relative;
 
     @include mq('md'){
-        padding: rem(140) 0 rem(160);
+        padding: rem(140) 0 rem(163);
+    }
+}
+
+.contact__inner{
+    max-width: calc(rem(600) + calc(rem(15) * 2));
+    width: 100%;
+    margin: auto;
+
+    @include mq('md'){
+        width: 100%;
     }
 }
 
 .contact__block{
     background-color: $white;
+
     @include mq('md'){
+        padding: 0;
         display: flex;
         padding: rem(80) 0;
         box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
@@ -20,6 +32,7 @@
 }
 
 .contact__information{
+    padding: 0 rem(25);
 
     @include mq('md'){
         width: 53%;
@@ -103,7 +116,7 @@
 }
 
 .contact__map{
-    width: rem(295);
+    width: 100%;
     margin: rem(16) auto 0;
     aspect-ratio: 295 / 160;
     box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
@@ -126,6 +139,7 @@
 
 .contact__content{
     margin-top: rem(40);
+    padding: 0 rem(15);
 
     @include mq('md'){
         margin-top: 0;
@@ -171,7 +185,7 @@
 
     @include mq('md'){
         top: rem(100);
-        right: calc(50% - rem(673));
+        right: calc(50% - min(50vW, rem(673)));
     }
 }
 

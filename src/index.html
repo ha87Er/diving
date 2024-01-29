@@ -54,12 +54,10 @@
   </div>
 
   <header class="header">
-    <div class="header__inner inner">
-      <div class="header__logo">
-        <a href="/">
-          <img src="./assets/images/common/logo.svg" alt="CodeUps">
-        </a>
-      </div>
+    <div class="header__inner">
+      <a class="header__logo-link" href="/">
+        <img src="./assets/images/common/logo.svg" alt="CodeUps">
+      </a>
       <nav class="header__nav">
         <ul class="header__nav-items">
           <li class="header__nav-item"><a href="#" class="header__nav-link">Campaign<span>キャンペーン</span></a></li>
@@ -170,76 +168,68 @@
 <section class="campaign">
   <div class="campaign__inner inner">
     <div class="campaign__title">
-      <h2 class="title-en"><span class="title-accent">C</span>ampaign</h2>
-      <span class="title-ja">キャンペーン</span>
+      <div class="title-en"><span class="title-accent">C</span>ampaign</div>
+      <h2 class="title-ja">キャンペーン</h2>
     </div>
     <div class="campaign__card-wrap">
       <div class="swiper campaign__swiper js-campaign-swiper">
         <div class="swiper-wrapper campaign__card">
-          <div class="swiper-slide">
-            <a href="#" class="campaign-card">
-              <div class="campaign-card__image">
-                <img src="./assets/images/common/campaign_img1.jpg" alt="水槽に黄色と黒の縞模様の熱帯魚がたくさん泳いでいる">
+          <a class="swiper-slide campaign-card">
+            <div class="campaign-card__image">
+              <img src="./assets/images/common/campaign_img1.jpg" alt="水槽に黄色と黒の縞模様の熱帯魚がたくさん泳いでいる">
+            </div>
+            <div class="campaign-card__body">
+              <div><p class="campaign-card__tag">ライセンス講習</p></div>
+              <div class="campaign-card__title">ライセンス取得</div>
+              <p class="campaign-card__text">全部コミコミ(お一人様)</p>
+              <div class="campaign-card__price">
+                <p class="campaign-card__price-before"><span>¥56,000</span></p>
+                <p class="campaign-card__price-after">¥46,000</p>
               </div>
-              <div class="campaign-card__body">
-                <div class="campaign-card__tag">ライセンス講習</div>
-                <div class="campaign-card__title">ライセンス取得</div>
-                <p class="campaign-card__text">全部コミコミ(お一人様)</p>
-                <div class="campaign-card__price">
-                  <p class="campaign-card__price-before"><span>¥56,000</span></p>
-                  <p class="campaign-card__price-after">¥46,000</p>
-                </div>
+            </div>
+          </a>
+          <a class="swiper-slide campaign-card">
+            <div class="campaign-card__image">
+              <img src="./assets/images/common/campaign_img2.jpg" alt="山が見える透明度が高い綺麗な海に船が２隻浮かんでいる">
+            </div>
+            <div class="campaign-card__body">
+              <div><p class="campaign-card__tag">体験ダイビング</p></div>
+              <div class="campaign-card__title">貸切体験ダイビング</div>
+              <p class="campaign-card__text">全部コミコミ(お一人様)</p>
+              <div class="campaign-card__price">
+                <p class="campaign-card__price-before"><span>¥24,000</span></p>
+                <p class="campaign-card__price-after">¥18,000</p>
               </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#" class="campaign-card">
-              <div class="campaign-card__image">
-                <img src="./assets/images/common/campaign_img2.jpg" alt="山が見える透明度が高い綺麗な海に船が２隻浮かんでいる">
+            </div>
+          </a>
+          <a class="swiper-slide campaign-card">
+            <div class="campaign-card__image">
+              <img src="./assets/images/common/campaign_img3.jpg" alt="たくさんのクラゲが照明の暗い水槽を泳いでいる">
+            </div>
+            <div class="campaign-card__body">
+              <div><p class="campaign-card__tag">体験ダイビング</p></div>
+              <div class="campaign-card__title">ナイトダイビング</div>
+              <p class="campaign-card__text">全部コミコミ(お一人様)</p>
+              <div class="campaign-card__price">
+                <p class="campaign-card__price-before"><span>¥10,000</span></p>
+                <p class="campaign-card__price-after">¥8,000</p>
               </div>
-              <div class="campaign-card__body">
-                <div class="campaign-card__tag">体験ダイビング</div>
-                <div class="campaign-card__title">貸切体験ダイビング</div>
-                <p class="campaign-card__text">全部コミコミ(お一人様)</p>
-                <div class="campaign-card__price">
-                  <p class="campaign-card__price-before"><span>¥24,000</span></p>
-                  <p class="campaign-card__price-after">¥18,000</p>
-                </div>
+            </div>
+          </a>
+          <a class="swiper-slide campaign-card">
+            <div class="campaign-card__image">
+              <img src="./assets/images/common/campaign_img4.jpg" alt="仲間たちとダイビングをする姿">
+            </div>
+            <div class="campaign-card__body">
+              <div><p class="campaign-card__tag">ファンダイビング</p></div>
+              <div class="campaign-card__title">貸切ファンダイビング</div>
+              <p class="campaign-card__text">全部コミコミ(お一人様)</p>
+              <div class="campaign-card__price">
+                <p class="campaign-card__price-before"><span>¥20,000</span></p>
+                <p class="campaign-card__price-after">¥16,000</p>
               </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#" class="campaign-card">
-              <div class="campaign-card__image">
-                <img src="./assets/images/common/campaign_img3.jpg" alt="たくさんのクラゲが照明の暗い水槽を泳いでいる">
-              </div>
-              <div class="campaign-card__body">
-                <div class="campaign-card__tag">体験ダイビング</div>
-                <div class="campaign-card__title">ナイトダイビング</div>
-                <p class="campaign-card__text">全部コミコミ(お一人様)</p>
-                <div class="campaign-card__price">
-                  <p class="campaign-card__price-before"><span>¥10,000</span></p>
-                  <p class="campaign-card__price-after">¥8,000</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#" class="campaign-card">
-              <div class="campaign-card__image">
-                <img src="./assets/images/common/campaign_img4.jpg" alt="仲間たちとダイビングをする姿">
-              </div>
-              <div class="campaign-card__body">
-                <div class="campaign-card__tag">ファンダイビング</div>
-                <div class="campaign-card__title">貸切ファンダイビング</div>
-                <p class="campaign-card__text">全部コミコミ(お一人様)</p>
-                <div class="campaign-card__price">
-                  <p class="campaign-card__price-before"><span>¥20,000</span></p>
-                  <p class="campaign-card__price-after">¥16,000</p>
-                </div>
-              </div>
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
       <div class="swiper-button-next campaign-next js-campaign-next"></div>
       <div class="swiper-button-prev campaign-prev js-campaign-prev"></div>
@@ -259,8 +249,8 @@
 <section class="about">
   <div class="about__inner inner">
     <div class="about__title">
-      <h2 class="title-en"><span class="title-accent">A</span>bout us</h2>
-      <span class="title-ja">私たちについて</span>
+      <div class="title-en"><span class="title-accent">A</span>bout us</div>
+      <h2 class="title-ja">私たちについて</h2>
     </div>
     <div class="about__image">
       <img src="./assets/images/common/about_img-fish.jpg" alt="海の中を泳ぐ黄色い熱帯魚">
@@ -288,8 +278,8 @@
 <section class="information">
   <div class="information__inner inner">
     <div class="information__title">
-      <h2 class="title-en"><span class="title-accent">I</span>nformation</h2>
-      <span class="title-ja">ダイビング情報</span>
+      <div class="title-en"><span class="title-accent">I</span>nformation</div>
+      <h2 class="title-ja">ダイビング情報</h2>
     </div>
     <div class="information__wrap">
       <div class="information__image colorbox inview">
@@ -317,12 +307,12 @@
 <section class="blog">
   <div class="blog__inner inner">
     <div class="blog__title u-desktop">
-      <h2 class="title-en title-en--white"><span class="title-accent">B</span>log</h2>
-      <span class="title-ja title-ja--white">ブログ</span>
+      <div class="title-en title-en--white"><span class="title-accent">B</span>log</div>
+      <h2 class="title-ja title-ja--white">ブログ</h2>
     </div>
     <div class="blog__title u-mobile">
-      <h2 class="title-en"><span class="title-accent">B</span>log</h2>
-      <span class="title-ja">ブログ</span>
+      <div class="title-en"><span class="title-accent">B</span>log</div>
+      <h2 class="title-ja">ブログ</h2>
     </div>
     <div class="blog__items">
       <a href="#" class="blog__item">
@@ -382,8 +372,8 @@
 <section class="voice">
   <div class="voice__inner inner">
     <div class="voice__title">
-      <h2 class="title-en"><span class="title-accent">V</span>oice</h2>
-      <span class="title-ja">お客様の声</span>
+      <div class="title-en"><span class="title-accent">V</span>oice</div>
+      <h2 class="title-ja">お客様の声</h2>
     </div>
     <div class="voice__items">
       <a href="#" class="voice__item">
@@ -445,8 +435,8 @@
 <section class="price">
   <div class="price__inner inner">
     <div class="price__title">
-      <h2 class="title-en"><span class="title-accent">P</span>rice</h2>
-      <span class="title-ja">料金一覧</span>
+      <div class="title-en"><span class="title-accent">P</span>rice</div>
+      <h2 class="title-ja">料金一覧</h2>
     </div>
     <div class="price__content">
       <div class="price__image-wrap colorbox inview">
@@ -566,8 +556,8 @@
       <div class="contact__content">
         <div class="contact__content-wrap">
           <div class="contact__title">
-            <h2 class="title-en title-accent--large"><span class="title-accent">C</span>ontact</h2>
-            <span class="title-ja title-accent--large">お問い合わせ</span>
+            <div class="title-en title-accent--large"><span class="title-accent">C</span>ontact</div>
+            <h2 class="title-ja title-accent--large">お問い合わせ</h2>
           </div>
           <p class="contact__text">ご予約・お問い合わせはコチラ</p>
           <div class="contact__button">

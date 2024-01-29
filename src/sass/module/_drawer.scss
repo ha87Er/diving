@@ -18,6 +18,12 @@
     }
 }
 
+.drawer__inner{
+    max-width: calc(rem(600) + rem(15)*2);
+    width: 100%;
+    margin: auto;
+}
+
 .drawer.is-active{
     transform: translateX(0);
 }
@@ -25,10 +31,13 @@
 .drawer__nav{
     display: flex;
     margin-top: calc(rem(80) + rem(24));
+    justify-content: space-evenly;
+    gap: rem(7);
 }
 
+.drawer__nav-left,
 .drawer__nav-right{
-    margin-left: rem(7);
+    width: 50%;
 }
 
 .drawer__nav-left .drawer__nav-items,
@@ -51,6 +60,7 @@
     padding-bottom: rem(12);
     padding-left: rem(22);
 }
+
 
 .drawer__nav-link.drawer__nav-link--bold{
     font-weight: $bold;
