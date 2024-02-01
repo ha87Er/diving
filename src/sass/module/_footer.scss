@@ -1,17 +1,5 @@
 @use 'global' as *;
 
-
-.footer{
-    padding-top: rem(48);
-    padding-bottom: rem(56);
-    background-color: #408F95;
-
-    @include mq('md'){
-        padding-top: rem(80);
-        padding-bottom: rem(80);
-    }
-}
-
 .footer__inner{
     max-width: calc(rem(600) + calc(rem(15) * 2));
     width: 100%;

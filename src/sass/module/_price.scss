@@ -1,17 +1,5 @@
 @use 'global' as *;
 
-.price{
-    margin-top: rem(83);
-    padding: rem(80) 0 rem(83);
-    background-color: $sub-color;
-    position: relative;
-
-    @include mq('md'){
-        margin-top: rem(143);
-        padding: rem(103) 0 rem(106);
-    }
-}
-
 .price__inner{
     max-width: calc(rem(600) + calc(rem(15) * 2));
     width: 100%;
@@ -23,7 +11,7 @@
 }
 
 .price__content{
-    margin-top: rem(30);
+    margin-top: rem(27);
 
     @include mq('md'){
         margin-top: rem(40);
@@ -66,18 +54,17 @@
 
 .price__button{
     margin-top: rem(40);
-    margin-left: rem(-3);
     text-align: center;
 
     @include mq('md'){
-        margin-top: rem(83);
+        margin-top: rem(80);
     }
 }
 
 .price__accent{
     position: absolute;
-    bottom: rem(58);
-    left: calc(50% - min(50vW, rem(620)));
+    bottom: rem(61);
+    left: calc(50% - min(48vw, rem(620)));
 
 }
 

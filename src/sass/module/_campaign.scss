@@ -1,13 +1,7 @@
 @use 'global' as *;
 
 .campaign{
-    margin-top: rem(40);
     overflow: hidden;
-    padding-bottom: rem(4);
-
-    @include mq('md'){
-        margin-top: rem(120);
-    }
 }
 
 .campaign__inner{
@@ -26,8 +20,9 @@
 }
 
 .campaign__card-wrap{
-    margin-top: rem(18);
+    margin-top: rem(25);
     margin-right: calc(50% - 50vw);
+
 
     @include mq('md'){
         margin-top: rem(40);
@@ -35,14 +30,10 @@
 }
 
 .campaign__swiper{
-    padding: rem(10);
-    margin-left: rem(-10);
+    padding: rem(3);
+    padding-bottom: rem(5);
     display: flex;
-    
-    @include mq('md'){
-        padding: rem(105) rem(10) rem(10);
-        margin-top: rem(-105);
-    }
+
 }
 
 .campaign__card{
@@ -64,6 +55,7 @@
 
 .campaign-next,
 .campaign-prev{
+    display: none;
     
     @include mq('md'){
         display: block;
@@ -121,12 +113,11 @@
 }
 
 .campaign__button{
-    margin-top: rem(30);
+    margin-top: rem(34);
     text-align: center;
-    margin-left: rem(-5);
 
     @include mq('md'){
-        margin-top: rem(69);
+        margin-top: rem(72);
     }
 }
 

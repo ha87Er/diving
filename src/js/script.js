@@ -1,25 +1,56 @@
+jQuery(function ($) {
+// ドロワー表示
+$(".js-hamburger").on("click", function (e) {
+  e.preventDefault();
+  $(".js-hamburger").toggleClass("is-active");
+  $(".js-header").toggleClass("is-open");
+  $(".js-drawer").toggleClass("is-active");
+  $("body").toggleClass("is-active"); // bodyにis-activeクラスの追加/削除をトグル
 
-jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
-//ドロワー表示
-jQuery(".js-hamburger").on("click", function (e) {
-    e.preventDefault();
-    jQuery(".js-hamburger").toggleClass("is-active");
-    jQuery(".js-drawer").toggleClass("is-active");
-  });
-
-//spナビクリックしたらドロワーが閉じる
-	jQuery('.js-drawer a[href^="#"]').on("click", function (e) {
-    jQuery(".js-hamburger").removeClass("is-active");
-    jQuery(".js-drawer").removeClass("is-active");
+  if ($("body").hasClass("is-active")) {
+    // bodyにis-activeクラスがある場合はoverflowをhiddenにし、heightを100%に設定する
+    $("body").css({
+      overflow: "hidden",
+      height: "100%"
+    });
+  } else {
+    // bodyにis-activeクラスがない場合はoverflowとheightのスタイルを削除する
+    $("body").removeAttr("style");
+  }
 });
+
+// spナビクリックしたらドロワーが閉じる
+$(".js-drawer a[href^='#']").on("click", function (e) {
+  $(".js-hamburger").removeClass("is-active");
+  $(".js-drawer").removeClass("is-active");
+  $(".js-header").removeClass("is-open");
+  $("body").removeClass("is-active");
+
+  // overflowとheightのスタイルを削除する
+  $("body").removeAttr("style");
+});
+
+// ドロワーメニュー内の閉じるボタンをクリックしたらドロワーを閉じる
+$(".js-drawer-close").on("click", function (e) {
+  e.preventDefault();
+  $(".js-hamburger").removeClass("is-active");
+  $(".js-drawer").removeClass("is-active");
+  $("body").removeClass("is-active");
+
+  // overflowとheightのスタイルを削除する
+  $("body").removeAttr("style");
+});
+
+
 
 //メインビジュアル　スライダー
 const mainVisualSwiper = new Swiper('.js-mv-swiper', {
     loop: true,
-    speed: 1500, // ループの時間
-    allowTouchMove: true, // スワイプ有効
+    effect: 'fade',  
+    speed: 2500, // ループの時間
+    allowTouchMove: false, // スワイプ無効
     autoplay: {
-        delay: 3500, // 途切れなくループ
+        delay: 500, // 途切れなくループ
         disableOnInteraction: false, // 自動再生を止めない
     },
 
@@ -28,23 +59,14 @@ const mainVisualSwiper = new Swiper('.js-mv-swiper', {
 //キャンペーン　スライダー
 const campaignSwiper = new Swiper(".js-campaign-swiper", {
     slidesPerView: 'auto', //スライドの枚数を自動調節
-    spaceBetween: 24, // スライド間のスペース
     allowTouchMove: true, // スワイプ有効
     grabCursor: true, //スライドをつかむ仕草
+    loop: true, //ループを有効にする
 
     // Navigation arrows
     navigation: {
       nextEl: ".js-campaign-next",
       prevEl: ".js-campaign-prev",
-    },
-  
-     //Responsive Breakpoint
-     breakpoints:{
-    
-      1000:{
-        spaceBetween: 40, // スライド間のスペース
-      }
-
     }
   });
 
@@ -120,17 +142,18 @@ box.each(function(){
 
 //ローディングアニメーション
 $(document).ready(function() {
-  // ページが読み込まれてから0.5秒後にクラスを追加
+  // ページが読み込まれてから0.3秒後にクラスを追加
   setTimeout(function() {
-    $(".loading__cover-left, .loading__cover-right").addClass("is-active");
-  }, 500);
+      $(".loading__cover-left, .loading__cover-right").addClass("is-active");
+  }, 300);
 
   // .loading__cover-left読み込み後に発火
   $(".loading__cover-left").on("animationend", function() {
-    setTimeout(function() {
-      $(".loading__title-wrap").css("z-index", 2002);
-      $(".loading__title, .loading__sub-title").fadeIn(2000).css("color", "#fff");
-    }, 800);
+      // タイミングを遅らせてタイトルとサブタイトルを表示し、白色に変更
+      setTimeout(function() {
+          $(".loading__title-wrap").css("z-index", 2002);
+          $(".loading__title, .loading__sub-title").fadeIn(500).css("color", "#fff");
+      }, 1000); // タイミングを遅らせる
   });
 
   // .loading__cover-right読み込み後に発火
@@ -138,10 +161,10 @@ $(document).ready(function() {
     $(".loading__title, .loading__sub-title").fadeOut(500);
   });
 
-  // ページが読み込まれてから5秒後にloadingを非表示にする
+  // ページが読み込まれてから3秒後にloadingを非表示にする
   setTimeout(function() {
-    $("#loading").fadeOut(2000);
-  }, 7000);
+      $("#loading").fadeOut(2000);
+  }, 3000);
 });
 
 

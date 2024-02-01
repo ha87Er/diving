@@ -1,14 +1,5 @@
 @use 'global' as *;
 
-.blog{
-    padding-top: rem(80);
-    position: relative;
-
-    @include mq('md'){
-        padding-top: rem(100);
-    }
-}
-
 .blog::before{
 
     @include mq('md'){
@@ -31,17 +22,15 @@
 
 .blog__items{
     margin-top: rem(28);
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: rem(41);
-    padding: 0 rem(6);
+    display: grid;
+    gap: rem(42);
+    grid-template-columns: 1fr;
+    padding: 0 rem(4);
 
     @include mq('md'){
-        gap: rem(39);
-        flex-direction: row;
-        margin-top: rem(80);
         padding: 0;
+        margin-top: rem(80);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -50,10 +39,7 @@
     background-color: $white;
     box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
     width: 100%;
-    
-    @include mq('md'){
-        width: calc(33.333% - calc(rem(39)*2 / 3));
-    }
+
 }
 
 .blog__item:hover{
@@ -67,7 +53,11 @@
 .blog__image::before{
     content: "";
     display: block;
-    padding-top: 66%;
+    padding-top: 65%;
+
+    @include mq('md'){
+        padding-top: 67%;
+    }
 }
 
 .blog__image img{
@@ -88,14 +78,13 @@
     color: $font-color;
     font-family: $third-font-family;
     font-size: rem(12);
-    line-height: 18px;
+    line-height: 1.5em;
 }
 
 .blog__text-title{
     color: $font-color;
     font-size: rem(16);
     font-weight: 500;
-    line-height: 24px;
     flex-grow: 1;
     position: relative;
 }
@@ -112,18 +101,16 @@
 
 .blog__text{
     color: $font-color;
-    font-size: rem(16);
-    line-height: 24px;
+    line-height: 1.5em;
     margin-top: rem(20);
 }
 
 .blog__button{
     margin-top: rem(40);
-    margin-left: rem(-4);
     text-align: center;
 
     @include mq('md'){
-    margin-top: rem(80);
+    margin-top: rem(85);
     }
 }
 
@@ -132,7 +119,7 @@
     @include mq('md'){
         position: absolute;
         top: rem(23);
-        left: calc(50% - min(50vW, rem(620)));
+        left: calc(50% - min(48vW, rem(620)));
 
     }
 }

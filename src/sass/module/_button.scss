@@ -5,9 +5,10 @@
     align-items: center;
     justify-content: center;
     background-color: $accent-color;
-    padding: rem(16) rem(31) rem(16) rem(39);
+    padding: rem(16) rem(45) rem(16) rem(40);
     position: relative;
     z-index: 1;
+    text-align: center;
 }
 
 .button p{
@@ -16,13 +17,21 @@
     font-weight: $normal;
     line-height: rem(22);
     font-size: rem(14);
-    margin-right: rem(8);
+    padding-right: rem(44);
+    position: relative;
 }
 
-.button svg{
-    width: rem(56);
-    margin-top: rem(-5);
-    margin-left: rem(-7);
+.button p::before{
+    content:"";
+    width: rem(40);
+    height: rem(6);
+    border-right: 2px solid $white;
+    border-bottom: 1px solid $white;
+    transform: skew(45deg);
+    display: block;
+    position: absolute;
+    top: rem(6);
+    right: 0;
 }
 
 .button::before{
@@ -55,8 +64,8 @@
     color: $accent-color;
 }
 
-.button:hover path{
-    stroke: $accent-color;
+.button:hover p::before{
+    border-color: $accent-color;
 }
 
 .button:hover::after {

@@ -40,17 +40,15 @@
     font-weight: $normal;
     font-family: $fourth-font-family;
     font-size: rem(40);
-    letter-spacing: 21.6px;
     width: 100%;
-    margin-left: rem(10);
     line-height: 1;
-    
+    letter-spacing: 0.54em;
+    text-indent: rem(20);
 
     @include mq('md'){
         font-size: rem(80);
         line-height: 100px;
-        letter-spacing: 42px;
-        margin-left: rem(20);
+        text-indent: rem(46);
     }
 }
 
@@ -103,15 +101,15 @@
 
   .loading__cover-left {
     left: 0;
-    animation: moveLeft 2s linear forwards;
-    animation-delay: 1s;
-  }
+    animation: moveLeft 0.5s linear forwards;
+    animation-delay: 0.5s;
+}
 
-  .loading__cover-right {
+.loading__cover-right {
     right: 0;
-    animation: moveRight 2.2s linear forwards;
-    animation-delay: 1.2s;
-  }
+    animation: moveRight 0.5s linear forwards;
+    animation-delay: 1.0s; 
+}
 
   .loading__cover-left img,
   .loading__cover-right img{

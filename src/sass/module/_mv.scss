@@ -35,16 +35,14 @@
     font-weight: $normal;
     font-family: $fourth-font-family;
     font-size: rem(40);
-    letter-spacing: 21.6px;
+    letter-spacing: 0.54em;
     line-height: 1;
-    padding-left: 20px;
-
+    text-indent: rem(20);
 
     @include mq('md'){
         font-size: rem(80);
         line-height: 100px;
-        letter-spacing: 42px;
-        padding-left: rem(43);
+        text-indent: rem(46);
     }
 }
 
