@@ -158,7 +158,7 @@ $(document).ready(function() {
 
   // .loading__cover-right読み込み後に発火
   $(".loading__cover-right").on("animationend", function() {
-    $(".loading__title, .loading__sub-title").fadeOut(500);
+    $(".loading__title, .loading__sub-title").fadeOut;
   });
 
   // ページが読み込まれてから3秒後にloadingを非表示にする

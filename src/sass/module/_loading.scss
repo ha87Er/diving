@@ -53,7 +53,7 @@
 }
 
 .loading__sub-title{
-  display: block;
+    display: block;
     color: $accent-color;
     font-family: $third-font-family;
     font-size: rem(20);
@@ -130,19 +130,25 @@
 
   @keyframes moveLeft {
     0% {
-        top: calc(100% - 80px);
+        // top: calc(100% - 80px);
+        top: 50%;
+        opacity: 0;
     }
     100% {
       top: 0;
+      opacity: 1;
     }
   }
 
   @keyframes moveRight {
     0% {
-        top: 100%;
+        // top: 100%;
+        top: 50%;
+        opacity: 0;
     }
     100% {
       top: 0;
+      opacity: 1;
     }
     }
 
