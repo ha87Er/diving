@@ -2,7 +2,6 @@
 
 .layout-blog{
     padding-top: rem(80);
-    position: relative;
 
     @include mq('md'){
         padding-top: rem(100);

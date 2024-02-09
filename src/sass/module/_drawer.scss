@@ -1,6 +1,5 @@
 @use 'global' as *;
 
-// ドロワーメニュー
 .drawer{
     position: absolute;
     top: rem(79);
@@ -52,7 +51,7 @@
     margin-top: 0;
 }
 
-.drawer__nav-link{
+.drawer__nav-item a{
     display: block;
     color: $white;
     font-weight: $normal;
@@ -63,20 +62,20 @@
     padding-left: rem(22);
 }
 
-
-.drawer__nav-link.drawer__nav-link--bold{
+.drawer__nav-item--bold a{
     font-weight: $bold;
     padding-top: 0;
     position: relative;
 }
 
-.drawer__nav-link.drawer__nav-link--bold::before{
+.drawer__nav-item--bold a::before{
     content: "";
     width: rem(18);
     height: rem(18);
-    background: url(../images/common/footer_starfish.png) no-repeat center center / contain;
+    background: url(../images/common/icon_starfish.png) no-repeat center center / contain;
     position: absolute;
     top: 0;
     left: 0;
 }
+
 

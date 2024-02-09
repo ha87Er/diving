@@ -151,14 +151,14 @@ $(document).ready(function() {
   $(".loading__cover-left").on("animationend", function() {
       // タイミングを遅らせてタイトルとサブタイトルを表示し、白色に変更
       setTimeout(function() {
-          $(".loading__title-wrap").css("z-index", 2002);
-          $(".loading__title, .loading__sub-title").fadeIn(500).css("color", "#fff");
+          $(".loading__title").css("z-index", 2002);
+          $(".main-title__title, .main-title__sub-title").fadeIn(500).css("color", "#fff");
       }, 1000); // タイミングを遅らせる
   });
 
   // .loading__cover-right読み込み後に発火
   $(".loading__cover-right").on("animationend", function() {
-    $(".loading__title, .loading__sub-title").fadeOut;
+    $(".main-title__title, .main-title__sub-title").fadeOut;
   });
 
   // ページが読み込まれてから3秒後にloadingを非表示にする

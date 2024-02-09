@@ -1,5 +1,16 @@
 @use 'global' as *;
 
+.footer{
+    padding-top: rem(48);
+    padding-bottom: rem(56);
+    background-color: #408F95;
+
+    @include mq('md'){
+        padding-top: rem(80);
+        padding-bottom: rem(80);
+    }
+}
+
 .footer__inner{
     max-width: calc(rem(600) + calc(rem(15) * 2));
     width: 100%;
@@ -135,7 +146,7 @@
     }
 }
 
-.footer__nav-link{
+.footer__nav-item a{
     display: block;
     color: $white;
     font-weight: $normal;
@@ -147,21 +158,21 @@
     letter-spacing: 0;
 }
 
-.footer__nav-link:hover{
+.footer__nav-item a:hover{
     opacity: 0.7;
 }
 
-.footer__nav-link.footer__nav-link--bold{
+.footer__nav-item--bold a{
     font-weight: $bold;
     padding-top: 0;
     position: relative;
 }
 
-.footer__nav-link.footer__nav-link--bold::before{
+.footer__nav-item--bold a::before{
     content: "";
     width: rem(18);
     height: rem(18);
-    background: url(../images/common/footer_starfish.png) no-repeat center center / contain;
+    background: url(../images/common/icon_starfish.png) no-repeat center center / contain;
     position: absolute;
     top: 0;
     left: 0;

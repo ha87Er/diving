@@ -11,6 +11,37 @@
     }
 }
 
+.about__inner::before{
+    
+    @include mq('md'){
+        content: "";
+        display: block;
+        width: rem(194);
+        height: rem(181);
+        position: absolute;
+        bottom: rem(-90);
+        right: calc(50% - min(48vw, rem(637)));
+        background: url(../images/common/accent_coral.png) no-repeat center center / contain;
+    }
+
+}
+
+.about__accent{
+
+    @include mq('md'){
+        position: absolute;
+        bottom: rem(-90);
+        right: calc(50% - min(48vw, rem(637)));
+    }
+}
+
+.about__accent img{
+
+    @include mq('md'){
+        width: rem(194);
+    }
+}
+
 .about__image-wrap{
     margin-top: rem(27);
     display: flex;
@@ -74,24 +105,18 @@
 
 }
 
-.about__second-title{
+.about__content-title{
     color: $accent-color;
     font-family: $third-font-family;
     font-size: rem(40);
     font-weight: $normal;
-    line-height: 40px;
-
-    @include mq('md'){
-        font-size: rem(80);
-        line-height: 100px;
-        width: 50%;
-    }
-}
-
-.about__second-title.about__second-title--white{
+    line-height: 1;
 
     @include mq('md'){
         color: $white;
+        font-size: rem(80);
+        line-height: 1.25;
+        width: 50%;
     }
 }
 
@@ -120,21 +145,5 @@
 
     @include mq('md'){
         margin-top: rem(40);
-    }
-}
-
-.about__accent{
-
-    @include mq('md'){
-        position: absolute;
-        bottom: rem(-90);
-        right: calc(50% - min(48vw, rem(637)));
-    }
-}
-
-.about__accent img{
-
-    @include mq('md'){
-        width: rem(194);
     }
 }

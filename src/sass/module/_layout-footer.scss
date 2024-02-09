@@ -2,13 +2,9 @@
 
 .layout-footer{
     margin-top: rem(105);
-    padding-top: rem(48);
-    padding-bottom: rem(56);
-    background-color: #408F95;
 
     @include mq('md'){
         margin-top: rem(159);
-        padding-top: rem(80);
-        padding-bottom: rem(80);
+
     }
 }

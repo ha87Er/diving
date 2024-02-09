@@ -1,5 +1,28 @@
 @use 'global' as *;
 
+.price{
+    position: relative;
+    background-color: $sub-color;
+    padding: rem(80) 0 rem(83);
+
+    @include mq('md'){
+        padding: rem(103) 0 rem(106);
+    }
+}
+
+.price::before{
+
+    @include mq('md'){
+        content: "";
+        width: rem(437);
+        height: rem(201);
+        background: url(../images/common/accent_fish3.svg)no-repeat center center / cover;
+        position: absolute;
+        bottom: rem(61);
+        left: calc(50% - min(48vw, rem(620)));
+    }
+}
+
 .price__inner{
     max-width: calc(rem(600) + calc(rem(15) * 2));
     width: 100%;
@@ -59,15 +82,4 @@
     @include mq('md'){
         margin-top: rem(80);
     }
-}
-
-.price__accent{
-    position: absolute;
-    bottom: rem(61);
-    left: calc(50% - min(48vw, rem(620)));
-
-}
-
-.price__accent img{
-    width: rem(437);
 }

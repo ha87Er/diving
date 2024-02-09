@@ -105,18 +105,12 @@
     font-size: rem(20);
     font-weight: $bold;
     line-height: 20px;
+    text-decoration:line-through solid 3px #C94800;
 
     @include mq('md'){
         font-size: rem(24);
         line-height: 24px;
     }
-}
-
-.campaign-card__price-before span{
-    text-decoration:line-through;
-    text-decoration-color:#C94800;
-    text-decoration-style:solid;
-    text-decoration-thickness: 3px;
 }
 
 .campaign-card__price-after{

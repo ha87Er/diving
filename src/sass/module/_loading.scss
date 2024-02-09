@@ -20,7 +20,7 @@
     }
   }
 
-  .loading__title-wrap{
+  .loading__title{
     position: absolute;
     z-index: 2;
     width: 100%;
@@ -31,36 +31,6 @@
 
     @include mq('md'){
 
-    }
-}
-
-  .loading__title{
-    display: block;
-    color: $accent-color;
-    font-weight: $normal;
-    font-family: $fourth-font-family;
-    font-size: rem(40);
-    width: 100%;
-    line-height: 1;
-    letter-spacing: 0.54em;
-    text-indent: rem(20);
-
-    @include mq('md'){
-        font-size: rem(80);
-        line-height: 100px;
-        text-indent: rem(46);
-    }
-}
-
-.loading__sub-title{
-    display: block;
-    color: $accent-color;
-    font-family: $third-font-family;
-    font-size: rem(20);
-    margin-top: 7px;
-
-    @include mq('md'){
-        
     }
 }
 
@@ -108,7 +78,7 @@
 .loading__cover-right {
     right: 0;
     animation: moveRight 0.5s linear forwards;
-    animation-delay: 1.0s; 
+    animation-delay: 1.0s;
 }
 
   .loading__cover-left img,
@@ -130,7 +100,6 @@
 
   @keyframes moveLeft {
     0% {
-        // top: calc(100% - 80px);
         top: 50%;
         opacity: 0;
     }
@@ -142,7 +111,6 @@
 
   @keyframes moveRight {
     0% {
-        // top: 100%;
         top: 50%;
         opacity: 0;
     }

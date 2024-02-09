@@ -1,6 +1,10 @@
 @use 'global' as *;
 
-.title-en{
+.title{
+    text-align: center;
+}
+
+.title__en{
     color: $font-color;
     font-family: $third-font-family;
     font-size: rem(32);
@@ -13,11 +17,11 @@
     }
 }
 
-.title-accent{
+.title__en::first-letter{
     color: $accent-color;
 }
 
-.title-ja{
+.title__ja{
     display: block;
     text-align: center;
     color: $accent-color;
@@ -31,24 +35,33 @@
 }
 
 //色違いのタイトル
-.title-en.title-en--white{
-    color: $white;
+.title__en.title__en--white{
+
+    @include mq('md'){
+        color: $white;
+    }
 }
 
-.title-en.title-en--white .title-accent{
-    color: $white;
+.title__en--white::first-letter{
+    
+    @include mq('md'){
+        color: $white;
+    }
 }
 
-.title-ja.title-ja--white{
-    color: $white;
+.title__ja.title__ja--white{
+
+    @include mq('md'){
+        color: $white;
+    }
 }
 
 //サイズ違いのタイトル
-.title-en.title-accent--large{
+.title__en.title__en--large{
     font-size: rem(80);
     line-height: 0.8;
 }
 
-.title-ja.title-accent--large{
+.title__ja.title__ja--large{
     margin-top: 0;
 }

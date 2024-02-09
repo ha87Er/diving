@@ -80,7 +80,7 @@
     }
 }
 
-.header__nav-link{
+.header__nav-item a{
     height: inherit;
 
     @include mq('md'){
@@ -98,8 +98,7 @@
     }
 }
 
-.header__nav-link span{
-
+.header__nav-item a span{
     @include mq('md'){
         display: block;
         color: $white;
@@ -110,7 +109,7 @@
     }
 }
 
-.header__nav-link::after{
+.header__nav-item a::after{
 
     @include mq('md'){
         content: '';
@@ -125,7 +124,7 @@
     }
 }
 
-.header__nav-link:hover::after{
+.header__nav-item a:hover::after{
     transform: scale(1, 1);
 }
 
