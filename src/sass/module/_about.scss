@@ -75,11 +75,10 @@
     max-width: 81.44%;
     width: 100%;
     margin-top: rem(26);
-    margin-left: rem(-64);
+    margin-left: -18.5%;
 
     @include mq('md'){
         margin-top: rem(80);
-        margin-left: rem(-183);
         aspect-ratio: 880 / 581;
     }
 }
