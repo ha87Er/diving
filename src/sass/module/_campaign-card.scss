@@ -4,14 +4,8 @@
     display: flex;
     flex-direction: column;
     box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
-    width: rem(280);
     transition: all  0.3s ease;
-    margin-right: rem(24);
 
-    @include mq('md'){
-        margin-right: rem(39);
-        width: rem(333);
-    }
 }
 
 .campaign-card:hover{
@@ -76,6 +70,13 @@
     flex-grow: 1;
 }
 
+.campaign-card__title.campaign-card__title--large{
+    
+    @include mq('md'){
+        font-size: rem(24);
+    }
+}
+
 .campaign-card__text{
     margin-top: rem(8);
     color: $font-color;
@@ -128,3 +129,35 @@
     }
 }
 
+.campaign-card__description{
+    margin-top: rem(24);
+}
+
+.campaign-card__description-text{
+    color: $font-color;
+    font-size:  rem(16);
+    line-height: 24px;
+}
+
+.campaign-card__date{
+    color: $accent-color;
+    text-align: center;
+    font-family: $fourth-font-family;
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: 18px;
+    margin-top: rem(32);
+}
+
+.campaign-card__info{
+    color: $accent-color;
+    text-align: center;
+    font-size: rem(14);
+    line-height: 18px;
+    margin-top: rem(7);
+}
+
+.campaign-card__button{
+    margin-top: rem(16);
+    text-align: center;
+}

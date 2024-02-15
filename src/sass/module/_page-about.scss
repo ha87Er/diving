@@ -1,6 +1,6 @@
 @use 'global' as *;
 
-.about__inner{
+.page-about__inner{
     max-width: calc(rem(600) + calc(rem(15) * 2));
     width: 100%;
     margin: auto;
@@ -11,86 +11,87 @@
     }
 }
 
-.about__inner::before{
-    
+.page-about__inner::before{
+    content: "";
+    display: block;
+    width: rem(120);
+    height: rem(55);
+    position: absolute;
+    top: rem(-90);
+    left: calc(50% - min(48vw, rem(637)));
+    background: url(../images/common/accent_fish2.png) no-repeat center center / contain;
+    z-index: 1;
+
     @include mq('md'){
-        content: "";
-        display: block;
-        width: rem(194);
-        height: rem(181);
+        width: rem(301);
+        height: rem(138);
+
+    }
+
+}
+
+.page-about__accent{
+
+    @include mq('md'){
         position: absolute;
         bottom: rem(-90);
         right: calc(50% - min(48vw, rem(637)));
-        background: url(../images/common/accent_coral.png) no-repeat center center / contain;
-    }
-
-}
-
-.about__accent{
-
-    @include mq('md'){
-        position: absolute;
-        bottom: rem(-90);
-        right: calc(50% - min(48vw, rem(637)));
     }
 }
 
-.about__accent img{
+.page-about__accent img{
 
     @include mq('md'){
         width: rem(194);
     }
 }
 
-.about__image-wrap{
-    margin-top: rem(27);
+.page-about__image-wrap{
+    margin-top: rem(52);
     display: flex;
 
     @include mq('md'){
-        margin-top: rem(37);
+        margin-top: rem(178);
     }
 }
 
-.about__image1{
-    aspect-ratio: 128 / 194;
-    position: relative;
-    max-width: 37.1%;
-    width: 100%;
-    margin-bottom: rem(24);
+.page-about__image1{
+    display: none;
 
     @include mq('md'){
+        display: block;
+        max-width: 37.1%;
+        width: 100%;
+        position: relative;
         margin-bottom: rem(55);
         aspect-ratio: 400 / 606;
     }
 }
 
-.about__image1 img{
+.page-about__image1 img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.about__image2{
-    aspect-ratio: 281 / 186;
-    max-width: 81.44%;
+.page-about__image2{
+    aspect-ratio: 345 / 228;
     width: 100%;
-    margin-top: rem(26);
-    margin-left: -18.5%;
-
+    
     @include mq('md'){
         margin-top: rem(80);
+        margin-left: -18.5%;
         aspect-ratio: 880 / 581;
     }
 }
 
-.about__image2 img{
+.page-about__image2 img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.about__content{
-    margin-top: rem(37);
+.page-about__content{
 
     @include mq('md'){
         position: absolute;
@@ -104,30 +105,33 @@
 
 }
 
-.about__content-title{
-    color: $accent-color;
+.page-about__content-title{
+    color: $white;
     font-family: $third-font-family;
     font-size: rem(40);
     font-weight: $normal;
     line-height: 1;
+    position: absolute;
+    top: 6.95%;
+    left: 6.95%;
 
     @include mq('md'){
-        color: $white;
+        position: static;
         font-size: rem(80);
         line-height: 1.25;
         width: 50%;
     }
 }
 
-.about__text-block{
+.page-about__text-block{
 
     @include mq('md'){
         width: 50%;
     }
 }
 
-.about__text{
-    margin-top: rem(16);
+.page-about__text{
+    margin-top: rem(40);
     color: $font-color;
     font-size: rem(16);
     line-height: 24px;
@@ -138,12 +142,4 @@
     }
 }
 
-.about__button{
-    text-align: center;
-    margin-top: rem(28);
-
-    @include mq('md'){
-        margin-top: rem(40);
-    }
-}
 

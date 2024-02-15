@@ -1,0 +1,59 @@
+@use 'global' as *;
+
+.wp-pagenavi{
+    display: flex;
+    justify-content: center;
+    gap: rem(12);
+}
+
+.wp-pagenavi a,
+.wp-pagenavi span,
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: rem(38);
+    width: rem(38);
+    background-color: $white;
+    color: $accent-color;
+    font-family: $fourth-font-family;
+    font-weight: $bold;
+    font-size: rem(16);
+    transition: 0.3s ease;
+    border: 1px solid $accent-color;
+}
+.wp-pagenavi a:hover{
+    opacity: 0.7;
+}
+.wp-pagenavi span.current{
+    background-color: $accent-color;
+    color: $white;
+}
+
+//前後の矢印の設定
+.wp-pagenavi .previouspostslink {
+    margin-right: calc(rem(40) - rem(12));
+}
+
+.wp-pagenavi .nextpostslink {
+    margin-left: calc(rem(40) - rem(12));
+}
+
+.wp-pagenavi .previouspostslink:before {
+    content: "";
+    width: rem(10);
+    height: rem(10);
+    border-left: 1px solid $accent-color;
+    border-bottom: 1px solid $accent-color;
+    transform: translateX(2px) rotate(45deg);
+}
+
+.wp-pagenavi .nextpostslink:before {
+    content: "";
+    width: rem(10);
+    height: rem(10);
+    border-right: 1px solid $accent-color;
+    border-bottom: 1px solid $accent-color;
+    transform: translateX(-2px) rotate(-45deg);
+}

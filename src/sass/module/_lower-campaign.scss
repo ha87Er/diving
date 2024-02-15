@@ -1,0 +1,26 @@
+@use 'global' as *;
+
+
+.lower-campaign__cards{
+    display: grid;
+    gap: rem(40);
+    justify-content: center;
+    margin-top: rem(46);
+
+    @include mq('md'){
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: rem(40);
+        row-gap: rem(80);
+    }
+
+}
+
+.lower-campaign__card{
+  max-width: rem(280);
+  width: 100%;
+
+  @include mq('md'){
+    max-width: rem(520);
+    width: 100%;
+  }
+}

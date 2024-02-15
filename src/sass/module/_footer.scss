@@ -73,110 +73,105 @@
 
 .footer__nav{
     margin-top: rem(40);
-    display: flex;
-    width: 100%;
-    gap: rem(13);
-    justify-content: space-evenly;
 
     @include mq('md'){
-        gap: rem(38);
         margin-top: rem(24);
     }
 }
 
-.footer__nav-left,
-.footer__nav-right{
-    width: 50%;
+// .footer__nav-left,
+// .footer__nav-right{
+//     width: 50%;
     
-    @include mq('md'){
-    }
-}
+//     @include mq('md'){
+//     }
+// }
 
-.footer__nav-left{
+// .footer__nav-left{
 
-    @include mq('md'){
-        display: flex;
-    }
-}
+//     @include mq('md'){
+//         display: flex;
+//     }
+// }
 
-.footer__nav-right{
+// .footer__nav-right{
 
-    @include mq('md'){
-        margin-left: 0;
-        display: flex;
-    }
-}
+//     @include mq('md'){
+//         margin-left: 0;
+//         display: flex;
+//     }
+// }
 
-.footer__nav-wrap{
+// .footer__nav-wrap{
 
-    @include mq('md'){
-        width: 50%;
-    }
-}
+//     @include mq('md'){
+//         width: 50%;
+//     }
+// }
 
-.footer__nav-wrap .footer__nav-items{
-    margin-top: calc(rem(40) - rem(12));
-}
+// .footer__nav-wrap .footer__nav-items{
+//     margin-top: calc(rem(40) - rem(12));
+// }
 
-.footer__nav-wrap .footer__nav-items:first-child{
-    margin-top: 0;
-}
+// .footer__nav-wrap .footer__nav-items:first-child{
+//     margin-top: 0;
+// }
 
-.footer__nav .footer__nav-wrap:nth-child(2),
-.footer__nav .footer__nav-wrap:nth-child(4){
-    margin-top: calc(rem(40) - rem(12));
+// .footer__nav .footer__nav-wrap:nth-child(2),
+// .footer__nav .footer__nav-wrap:nth-child(4){
+//     margin-top: calc(rem(40) - rem(12));
 
-    @include mq('md'){
-        margin-top: 0;
-    }
+//     @include mq('md'){
+//         margin-top: 0;
+//     }
 
-}
+// }
 
-.footer__nav-left .footer__nav-wrap:nth-child(2){
+// .footer__nav-left .footer__nav-wrap:nth-child(2){
 
-    @include mq('md'){
-        margin-left: rem(55);
-    }
-}
+//     @include mq('md'){
+//         margin-left: rem(55);
+//     }
+// }
 
-.footer__nav-right .footer__nav-wrap:nth-child(2){
+// .footer__nav-right .footer__nav-wrap:nth-child(2){
 
-    @include mq('md'){
-        margin-left: rem(21);
-    }
-}
+//     @include mq('md'){
+//         margin-left: rem(21);
+//     }
+// }
 
-.footer__nav-item a{
-    display: block;
-    color: $white;
-    font-weight: $normal;
-    font-size: rem(16);
-    line-height: 18px;
-    padding-top: rem(12);
-    padding-bottom: rem(12);
-    padding-left: rem(22);
-    letter-spacing: 0;
-}
+// .footer__nav-item a{
+//     display: block;
+//     color: $white;
+//     font-weight: $normal;
+//     font-size: rem(16);
+//     line-height: 18px;
+//     padding-top: rem(12);
+//     padding-bottom: rem(12);
+//     padding-left: rem(22);
+//     letter-spacing: 0;
+// }
 
-.footer__nav-item a:hover{
-    opacity: 0.7;
-}
+// .footer__nav-item a:hover{
+//     opacity: 0.7;
+// }
 
-.footer__nav-item--bold a{
-    font-weight: $bold;
-    padding-top: 0;
-    position: relative;
-}
+// .footer__nav-item--bold a{
+//     font-weight: $bold;
+//     padding-top: 0;
+//     position: relative;
+// }
 
-.footer__nav-item--bold a::before{
-    content: "";
-    width: rem(18);
-    height: rem(18);
-    background: url(../images/common/icon_starfish.png) no-repeat center center / contain;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
+// .footer__nav-item--bold a::before{
+//     content: "";
+//     width: rem(18);
+//     height: rem(18);
+//     background: url(../images/common/icon_starfish.png) no-repeat center center / contain;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+// }
 
 .footer__copy{
     text-align: center;

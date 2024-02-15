@@ -29,11 +29,24 @@
 }
 
 
-.campaign__card{
+.campaign__cards{
     display: flex;
     flex-direction: row;
     height: auto;
     flex-grow: 1;
+
+}
+
+.campaign__card{
+    margin-right: rem(24);
+    max-width: rem(280);
+    width: 100%;
+
+    @include mq('md'){
+        margin-right: rem(39);
+        max-width: rem(333);
+
+    }
 }
 
 .campaign__arrow-wrap{
@@ -113,4 +126,19 @@
         margin-top: rem(72);
     }
 }
+
+//swiper
+.campaign{
+
+    .swiper-button-next,
+    .swiper-button-prev{
+        margin-top: 0;
+    }
+    
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        content: none;
+      }
+    
+    }
 

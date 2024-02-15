@@ -1,0 +1,42 @@
+@use 'global' as *;
+
+.gallery__image-warp{
+    margin-top: rem(40);
+    display: grid;
+    gap: rem(8);
+
+    @include mq('md'){
+        margin-top: rem(80);
+        grid-template-columns: repeat(9, 1fr);
+        grid-auto-flow: dense;
+    }
+}
+
+.gallery__image{
+    cursor: pointer;
+
+    @include mq('md'){
+        grid-column: span 5;
+        grid-row: span 1;
+    }
+}
+
+.gallery__image:nth-of-type(6n+1),
+.gallery__image:nth-of-type(6n+6) {
+    @include mq(md) {
+        grid-column: span 4;
+        grid-row: span 2;
+    }
+}
+
+.gallery__image img {
+    aspect-ratio: 345 / 219;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery__image-warp .gallery__image:nth-last-of-type(6n+1) img,
+.gallery__image-warp .gallery__image:nth-last-of-type(6n+6) img{
+    aspect-ratio: 345 / 523;
+}

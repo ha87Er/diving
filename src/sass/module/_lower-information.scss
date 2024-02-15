@@ -1,0 +1,36 @@
+@use 'global' as *;
+
+.lower-information__tabs{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(19);
+
+    @include mq('md'){
+        gap: rem(90);
+    }
+}
+
+.lower-information__tab{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: $accent-color;
+    text-align: center;
+    font-size: rem(14);
+    background-color: $sub-color;
+    padding: rem(10) 0;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.lower-information__tab.is-active{
+    background-color: $accent-color;
+    color: $white;
+}
+
+.lower-information__cards{
+    margin-top: rem(16);
+
+    @include mq('md'){
+        margin-top: rem(24);
+    }
+}

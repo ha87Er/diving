@@ -1,0 +1,46 @@
+@use 'global' as *;
+
+.sub-mv{
+    position: relative;
+}
+
+.sub-mv__image {
+    aspect-ratio: 375 / 460;
+    position: relative;
+}
+
+.sub-mv__image::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(64, 143, 149, 0.30);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.sub-mv__image img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+}
+
+.sub-mv__title {
+    color: $white;
+    font-family: $fourth-font-family;
+    font-size: rem(40);
+    line-height: 1.25;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 400;
+    z-index: 1;
+
+    @include mq('md'){
+        font-size: rem(80);
+    }
+
+}

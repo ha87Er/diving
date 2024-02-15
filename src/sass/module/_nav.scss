@@ -1,0 +1,117 @@
+@use 'global' as *;
+
+.nav{
+    display: flex;
+    width: 100%;
+    gap: rem(13);
+    justify-content: space-evenly;
+
+    @include mq('md'){
+        gap: rem(38);
+    }
+}
+
+.nav__left,
+.nav__right{
+    width: 50%;
+
+    @include mq('md'){
+    }
+}
+
+.nav__left{
+
+    @include mq('md'){
+        display: flex;
+    }
+}
+
+.nav__right{
+
+    @include mq('md'){
+        margin-left: 0;
+        display: flex;
+    }
+}
+
+.nav__wrap{
+
+    @include mq('md'){
+        width: 50%;
+    }
+}
+
+.nav__items{
+    margin-top: calc(rem(40) - rem(12));
+}
+
+.nav__wrap .nav__items:first-child{
+    margin-top: 0;
+}
+
+.nav .nav__wrap:nth-child(2),
+.nav .nav__wrap:nth-child(4){
+    margin-top: calc(rem(40) - rem(12));
+
+    @include mq('md'){
+        margin-top: 0;
+    }
+
+}
+
+.nav__left .nav__wrap:nth-child(2){
+
+    @include mq('md'){
+        margin-left: rem(55);
+    }
+}
+
+.nav__right .nav__wrap:nth-child(2){
+
+    @include mq('md'){
+        margin-left: rem(21);
+    }
+}
+
+.nav__item a{
+    display: block;
+    color: $white;
+    font-weight: $normal;
+    font-size: rem(16);
+    line-height: 18px;
+    padding-top: rem(12);
+    padding-bottom: rem(12);
+    padding-left: rem(22);
+    letter-spacing: 0;
+}
+
+.nav__item.nav__item--black a{
+    color: $font-color;
+}
+
+.nav__item a:hover{
+    opacity: 0.7;
+}
+
+.nav__item--bold a{
+    font-weight: $bold;
+    padding-top: 0;
+    position: relative;
+}
+
+.nav__item--bold a::before{
+    content: "";
+    width: rem(18);
+    height: rem(18);
+    background: url(../images/common/icon_starfish.png) no-repeat center center / contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.nav__item--black.nav__item--bold a::before{
+    background: url(../images/common/starfish_black.svg) no-repeat center center / contain;
+}
+
+
+

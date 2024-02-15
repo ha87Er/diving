@@ -168,6 +168,72 @@ $(document).ready(function() {
 });
 
 
+//タグ絞り込み
+$(function(){
+  var $btn = $('.tab-items [data-filter]'),
+      $list = $('.lower-campaign__cards [data-category]');
+
+  $btn.on('click', function() {
+    // クリックされた要素に is-active クラスを付与し、他の要素からは削除する
+    $btn.removeClass('is-active');
+    $(this).addClass('is-active');
+
+    var $btnCat = $(this).attr('data-filter'); //クリックした要素のdata-filter属性を取得
+
+    if ($btnCat == 'all') { //クリックして取得したdata-filterの値がallだったら
+      $list.show();
+    } else {//クリックして取得したdata-filterの値がall以外の場合
+       $list.hide().filter('[data-category = "' + $btnCat + '"]').show();
+    }
+    return false;
+  });
+});
+
+//タグ絞り込み information
+$(function(){
+  var $btn = $('.lower-information__tab[data-filter]'),
+      $list = $('.lower-information__card[data-category]');
+
+  // 最初にすべてのカードを非表示にする
+  $list.hide();
+
+  // info-license を持ったカードを表示する
+  $list.filter('[data-category="info-license"]').show();
+
+  $btn.on('click', function() {
+    // クリックされた要素に is-active クラスを付与し、他の要素からは削除する
+    $btn.removeClass('is-active');
+    $(this).addClass('is-active');
+
+    var $btnCat = $(this).attr('data-filter'); //クリックした要素のdata-filter属性を取得
+
+    // クリックして取得したdata-filterの値に一致するカードを表示する
+    $list.hide().filter('[data-category="' + $btnCat + '"]').show();
+    
+    return false;
+  });
+});
+
+
+//モーダルウィンドウ
+jQuery(function ($) {
+  $(".js-modal-open").each(function () {
+      $(this).on("click", function (e) {
+          e.preventDefault();
+          var target = $(this).data("target");
+          var modal  = document.getElementById(target);
+          $(modal).fadeIn();
+          $("html,body").css("overflow", "hidden");
+      });
+  });
+  $(".js-modal-close").on("click", function () {
+      $(".js-modal").fadeOut();
+      $("html,body").css("overflow", "initial");
+  });
+});
+
+
+
 
 });
 

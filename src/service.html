@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="robots" content="noindex" />
+  <!-- meta情報 -->
+  <title>(仮)DIVING</title>
+  <meta name="description" content="(仮)DIVINGでは、初心者から上級者まで、幅広いレベルのダイバーに対応したプログラムをご用意しています。プロのインストラクターが丁寧にサポートし、安心してダイビングの世界を楽しんでいただけます。透明度抜群の海で、カラフルな海洋生物たちとの出会いをお楽しみください。" />
+  <meta name="keywords" content="" />
+  <!-- ogp -->
+  <meta property="og:title" content="(仮)DIVING" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hana-coco.net" />
+  <meta property="og:image" content="https://hana-coco.net/assets/images/common/main-visual.jpg" />
+  <meta property="og:site_name" content="(仮)DIVING" />
+  <meta property="og:description" content="(仮)DIVINGでは、初心者から上級者まで、幅広いレベルのダイバーに対応したプログラムをご用意しています。プロのインストラクターが丁寧にサポートし、安心してダイビングの世界を楽しんでいただけます。透明度抜群の海で、カラフルな海洋生物たちとの出会いをお楽しみください。" />
+  <!-- ファビコン -->
+  <link rel="”icon”" href="#" />
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script defer src="./assets/js/jquery.inview.min.js"></script>
+  <script defer src="./assets/js/jquery.easing.min.js"></script>
+  <script defer src="./assets/js/script.js"></script>
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header layout-header js-header">
+    <div class="header__inner">
+      <a class="header__logo-link" href="/">
+        <img src="./assets/images/common/logo.svg" alt="CodeUps">
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav-items">
+          <li class="header__nav-item"><a href="#">Campaign<span>キャンペーン</span></a></li>
+          <li class="header__nav-item"><a href="#">About us<span>私たちについて</span></a></li>
+          <li class="header__nav-item"><a href="#">Information<span>ダイビング情報</span></a></li>
+          <li class="header__nav-item"><a href="#">Blog<span>ブログ</span></a></li>
+          <li class="header__nav-item"><a href="#">Voice<span>お客様の声</span></a></li>
+          <li class="header__nav-item"><a href="#">Price<span>料金一覧</span></a></li>
+          <li class="header__nav-item"><a href="#">FAQ<span>よくある質問</span></a></li>
+          <li class="header__nav-item"><a href="#">Contact<span>おい問わ合せ</span></a></li>
+        </ul>
+      </nav>
+      <button class="header__bars js-hamburger">
+        <span class="header__bar"></span>
+        <span class="header__bar"></span>
+        <span class="header__bar"></span>
+      </button>
+
+      <div class="header__drawer  drawer js-drawer">
+        <div class="drawer__inner inner">
+          <nav class="drawer__nav nav">
+            <div class="nav__left">
+              <div class="nav__wrap">
+                <ul class="nav__items">
+                  <li class="nav__item nav__item--bold"><a href="#campaign">キャンペーン</a></li>
+                  <li class="nav__item"><a href="#">ライセンス取得</a></li>
+                  <li class="nav__item"><a href="#">貸切体験ダイビング</a></li>
+                  <li class="nav__item"><a href="#">ナイトダイビング</a></li>
+                </ul>
+                <ul class="nav__items">
+                  <li class="nav__item nav__item--bold"><a href="#">私たちについて</a></li>
+                </ul>
+              </div>
+              <div class="nav__wrap">
+                <ul class="nav__items">
+                  <li class="nav__item  nav__item--bold"><a href="#">ダイビング情報</a></li>
+                  <li class="nav__item"><a href="#">ライセンス講習</a></li>
+                  <li class="nav__item"><a href="#">体験ダイビング</a></li>
+                  <li class="nav__item"><a href="#">ファンダイビング</a></li>
+                </ul>
+                <ul class="nav__items">
+                  <li class="nav__item nav__item--bold"><a href="#">ブログ</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="nav__right">
+              <div class="nav__wrap">
+                <ul class="nav__items">
+                  <li class="nav__item nav__item--bold"><a href="#">お客様の声</a></li>
+                </ul>
+                <ul class="nav__items">
+                  <li class="nav__item nav__item--bold"><a href="#">料金一覧</a></li>
+                  <li class="nav__item"><a href="#">ライセンス講習</a></li>
+                  <li class="nav__item"><a href="#">体験ダイビング</a></li>
+                  <li class="nav__item"><a href="#">ファンダイビング</a></li>
+                </ul>
+              </div>
+              <div class="nav__wrap">
+                <ul class="nav__items">
+                  <li class="nav__item nav__item--bold"><a href="#">よくある質問</a></li>
+                </ul>
+                <ul class="nav__items">
+                  <li class="nav__item nav__item--bold"><a href="#">プライバシー<br class="u-mobile">ポリシー</a></li>
+                </ul>
+                <ul class="nav__items">
+                  <li class="nav__item nav__item--bold"><a href="#">利用規約</a></li>
+                </ul>
+                <ul class="nav__items">
+                  <li class="nav__item nav__item--bold"><a href="#">お問い合わせ</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+
+
+<section class="contact layout-contact">
+  <div class="contact__inner inner">
+    <div class="contact__block">
+      <div class="contact__information">
+        <div class="contact__information-title">
+          <img src="./assets/images/common/logo-green.svg" alt="CodeUps">
+        </div>
+        <div class="contact__row-wrap">
+          <div class="contact__description">
+            <p class="contact__address">沖縄県那覇市1-1</p>
+            <p class="contact__tel"><a href="tel:0120-000-0000">TEL:0120-000-0000</a></p>
+            <p class="contact__sales">営業時間:8:30-19:00</p>
+            <p class="contact__holiday">定休日:毎週火曜日</p>
+          </div>
+          <div class="contact__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.3799814610384!2d127.71739497508827!3d26.216840277068698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56bfe6cf4db67%3A0xc0899fbab29e4f8b!2z6aaW6YeM5Z-O!5e0!3m2!1sja!2sjp!4v1705631042528!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="contact__content">
+        <div class="contact__content-wrap">
+          <div class="contact__title">
+            <div class="title__en title__en--large">Contact</div>
+            <h2 class="title__ja title__ja--large">お問い合わせ</h2>
+          </div>
+          <p class="contact__text">ご予約・お問い合わせはコチラ</p>
+          <div class="contact__button">
+            <a href="" class="button">
+              <p>Contact us</p>
+            </a>
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer layout-footer">
+  <div class="footer__inner inner">
+    <div class="footer__content">
+      <div class="footer__logo">
+        <img src="./assets/images/common/logo-white.svg" alt="CodeUps">
+      </div>
+      <div class="footer__sns">
+        <a href="#" class="footer__facebook">
+          <img src="./assets/images/common/facebook.png" alt="facebookアイコン">
+        </a>
+        <a href="#" class="footer__instagram">
+          <img src="./assets/images/common/instagram.png" alt="instagramアイコン">
+        </a>
+      </div>
+    </div>
+    <nav class="footer__nav nav">
+      <div class="nav__left">
+        <div class="nav__wrap">
+          <ul class="nav__items">
+            <li class="nav__item nav__item--bold"><a href="#campaign">キャンペーン</a></li>
+            <li class="nav__item"><a href="#">ライセンス取得</a></li>
+            <li class="nav__item"><a href="#">貸切体験ダイビング</a></li>
+            <li class="nav__item"><a href="#">ナイトダイビング</a></li>
+          </ul>
+          <ul class="nav__items">
+            <li class="nav__item nav__item--bold"><a href="#">私たちについて</a></li>
+          </ul>
+        </div>
+        <div class="nav__wrap">
+          <ul class="nav__items">
+            <li class="nav__item  nav__item--bold"><a href="#">ダイビング情報</a></li>
+            <li class="nav__item"><a href="#">ライセンス講習</a></li>
+            <li class="nav__item"><a href="#">体験ダイビング</a></li>
+            <li class="nav__item"><a href="#">ファンダイビング</a></li>
+          </ul>
+          <ul class="nav__items">
+            <li class="nav__item nav__item--bold"><a href="#">ブログ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav__right">
+        <div class="nav__wrap">
+          <ul class="nav__items">
+            <li class="nav__item nav__item--bold"><a href="#">お客様の声</a></li>
+          </ul>
+          <ul class="nav__items">
+            <li class="nav__item nav__item--bold"><a href="#">料金一覧</a></li>
+            <li class="nav__item"><a href="#">ライセンス講習</a></li>
+            <li class="nav__item"><a href="#">体験ダイビング</a></li>
+            <li class="nav__item"><a href="#">ファンダイビング</a></li>
+          </ul>
+        </div>
+        <div class="nav__wrap">
+          <ul class="nav__items">
+            <li class="nav__item nav__item--bold"><a href="#">よくある質問</a></li>
+          </ul>
+          <ul class="nav__items">
+            <li class="nav__item nav__item--bold"><a href="#">プライバシー<br class="u-mobile">ポリシー</a></li>
+          </ul>
+          <ul class="nav__items">
+            <li class="nav__item nav__item--bold"><a href="#">利用規約</a></li>
+          </ul>
+          <ul class="nav__items">
+            <li class="nav__item nav__item--bold"><a href="#">お問い合わせ</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <p class="footer__copy">Copyright © 2021 - 2023 CodeUps LLC. All Rights Reserved.</p>
+  </div>
+</footer>
+<!-- topへ戻るボタン -->
+<a href="#" class="pagetop" id="js-pagetop">
+  <img src="./assets/images/common/to-top.svg" alt="to-topボタン"/>
+</a>
+
+</body>
+</html>
