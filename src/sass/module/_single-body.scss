@@ -1,0 +1,75 @@
+@use 'global' as *;
+
+.single-body__wrap{
+    display: flex;
+    flex-direction: column;
+
+    @include mq('md'){
+        flex-direction: row;
+        gap: rem(86);
+    }
+}
+
+.single-body__date{
+    color: $font-color;
+    font-family: $third-font-family;
+    font-size: rem(14);
+    line-height: 18px;
+}
+
+.single-body__title{
+    margin-top: rem(8);
+}
+
+.single-body__image{
+    margin-top: rem(24);
+    aspect-ratio: 345 / 231;
+
+    @include mq('md'){
+        margin-top: rem(40);
+    }
+}
+
+.single-body__image img{
+    widows: 100%;
+    height: 100%;
+    overflow: cover;
+}
+
+.single-body__content{
+
+    p{
+        margin-top: rem(24);
+        color: $font-color;
+        font-size: rem(16);
+        line-height: 24px;
+
+        @include mq('md'){
+            margin-top: rem(40);
+        }
+    }
+}
+
+.single-body__lists{
+    margin-top: rem(24);
+
+    @include mq('md'){
+        margin-top: rem(40);
+    }
+}
+
+.single-body__list{
+    list-style: url(../images/common/icon-starfish_green.svg);
+    list-style-position: inside;
+    color: $font-color;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.single-body__link{
+    margin-top: rem(40);
+
+    @include mq('md'){
+        margin-top: rem(80);
+    }
+}

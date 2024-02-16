@@ -1,0 +1,19 @@
+@use 'global' as *;
+
+.side-title{
+    color: $font-color;
+    font-size: rem(24);
+    font-weight: $normal;
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+    padding-left: rem(24);
+    border-left: 8px solid $accent-color;
+}
+
+.side-title img{
+    display: inline-block;
+    width: rem(50);
+    height: rem(50);
+
+}

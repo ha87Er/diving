@@ -9,3 +9,11 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+.voice-items.voice-items--lower-voice{
+
+    @include mq('md'){
+        column-gap: rem(40);
+        row-gap: rem(80);
+    }
+}

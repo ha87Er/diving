@@ -1,0 +1,24 @@
+@use 'global' as *;
+
+.lower-blog__wrap{
+
+    @include mq('md'){
+        display: flex;
+        gap: rem(80);
+    }
+}
+
+.lower-blog__cards{
+
+}
+
+.lower-blog__side{
+    max-width: rem(294);
+    width: 100%;
+    margin: rem(80) auto 0;
+
+    @include mq('md'){
+        margin: 0 auto;
+    }
+}
+

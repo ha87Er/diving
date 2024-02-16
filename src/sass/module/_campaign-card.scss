@@ -77,6 +77,10 @@
     }
 }
 
+.campaign-card__title.campaign-card__title--center{
+    text-align: center;
+}
+
 .campaign-card__text{
     margin-top: rem(8);
     color: $font-color;

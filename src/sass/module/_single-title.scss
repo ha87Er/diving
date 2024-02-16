@@ -1,0 +1,13 @@
+@use 'global' as *;
+
+.single-title{
+    color: $font-color;
+    font-size: rem(24);
+    font-weight: 500;
+    padding-bottom: rem(4);
+    border-bottom: 1px solid $accent-color;
+
+    @include mq('md'){
+        font-size: rem(32);
+    }
+}
