@@ -38,6 +38,7 @@
     transform: translate(-50%, -50%);
     font-weight: 400;
     z-index: 1;
+    white-space: nowrap;
 
     @include mq('md'){
         font-size: rem(80);

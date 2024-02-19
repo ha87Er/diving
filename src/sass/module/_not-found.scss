@@ -1,0 +1,76 @@
+@use 'global' as *;
+
+.not-found__wrap{
+    background-color: $accent-color;
+    padding: rem(88) 0 rem(40);
+
+    @include mq('md'){
+        padding: rem(98) 0 rem(148);
+    }
+}
+
+.not-found__content{
+    padding: rem(88) 0 rem(40);
+    background-color: $accent-color;
+    position: relative;
+    // height: 100%;
+
+    @include mq('md'){
+        // min-height: rem(1000);
+        padding: rem(98) 0 rem(148);
+    }
+}
+
+.not-found__content::before{
+    content: "";
+    width: rem(350);
+    height: rem(350);
+    background: url(../images/common/whale.svg)no-repeat top center / contain;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include mq('md'){
+        width: rem(665);
+        height: rem(665);
+        top: 50%;
+        left: calc(50% - min(48vw, rem(550)));
+        transform: translateY(-50%);
+    }
+}
+
+.not-found__title{
+    color: $white;
+    font-family: $fourth-font-family;
+    font-size: rem(80);
+    font-weight: $normal;
+    letter-spacing: 0.4em;
+    text-align: center;
+    margin-top: rem(54);
+    position: relative;
+
+    @include mq('md'){
+        font-size: rem(160);
+        letter-spacing: 0.8em;
+        margin-top: rem(120);
+    }
+}
+
+.not-found__text{
+    color: $white;
+    text-align: center;
+    font-family: $fourth-font-family;
+    font-weight: $normal;
+    font-size: rem(16);
+    line-height: 24px;
+}
+
+.not-found__button{
+    text-align: center;
+    margin-top: rem(40);
+
+    @include mq('md'){
+        margin-top: rem(80);
+    }
+}

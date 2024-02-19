@@ -1,0 +1,10 @@
+@use 'global' as *;
+
+.header-background{
+    height: rem(88);
+    background: $accent-color;
+
+    @include mq('md'){
+        height: rem(98);
+    }
+}

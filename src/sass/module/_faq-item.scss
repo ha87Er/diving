@@ -1,0 +1,80 @@
+@use 'global' as *;
+
+.faq-item:not(:first-child){
+    margin-top: rem(44);
+
+    @include mq('md'){
+        margin-top: rem(40);
+    }
+}
+
+.faq-item__head{
+    background-color: $accent-color;
+    padding: rem(16);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mq('md'){
+        padding: rem(25) rem(40);
+    }
+}
+
+.faq-item__head-text{
+    color: $white;
+    font-size: rem(16);
+
+    @include mq('md'){
+        font-size: rem(20);
+    }
+}
+
+.faq-item__toggle{
+    position: relative;
+    width: rem(28);
+    height: rem(28);
+
+    @include mq('md'){
+        width: rem(32);
+        height: rem(32);
+    }
+}
+
+.faq-item__toggle span{
+    width: rem(28);
+    height: rem(1);
+    background-color: $white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    transition: all  0.3s ease;
+
+    @include mq('md'){
+        width: rem(32);
+    }
+}
+
+.faq-item.is-open {
+
+    .faq-item__toggle span:nth-child(2){
+        transform: rotate(90deg);
+    }
+
+}
+
+.faq-item__body{
+    display: none;
+    border: 1px solid $accent-color;
+    padding: rem(24) rem(16);
+
+    @include mq('md'){
+        padding: rem(40);
+        margin-top: rem(16);
+    }
+}
+
+.faq-item__text{
+    color: $font-color;
+    font-size: rem(16);
+}

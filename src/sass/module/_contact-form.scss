@@ -1,0 +1,93 @@
+@use 'global' as *;
+
+.contact-form__item{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: rem(24);
+    border-bottom: 1px dotted $accent-color ;
+
+    @include mq('md'){
+        flex-direction: row;
+    }
+}
+
+.contact-form__item:not(:first-child) {
+    margin-top: rem(24);
+
+    @include mq('md'){
+        margin-top: rem(40);
+    }
+}
+
+.contact-form__checkbox{
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+
+    @include mq('md'){
+    }
+}
+
+.contact-form__item dt{
+    font-size: rem(16);
+    font-weight: 700;
+    color: $font-color;
+
+    @include mq('md'){
+        font-size: rem(16);
+        width: rem(220);
+        text-align: left;
+    }
+
+}
+
+.contact-form__item dt span{
+    color: #fff;
+    background: #C94800;
+    font-size: rem(12);
+    margin-left: rem(8);
+    padding:  0 rem(12);
+    display: inline-block;
+    line-height: 1.5;
+    letter-spacing: 0.48em;
+
+    @include mq('md'){
+    }
+}
+
+.contact-form__item dd{
+        margin-top: rem(20);
+        color: $font-color;
+
+    @include mq('md'){
+        // width: calc(100% - rem(210));
+        margin-top: 0;
+        flex: 1;
+    }
+}
+
+.contact-form__item dd:first-child{
+    margin-top: 0;
+}
+
+.contact-form__btn{
+    text-align: center;
+    margin-top: rem(24);
+
+    @include mq('md'){
+        margin-top: rem(40);
+    }
+
+}
+
+.contact-form__privacy{
+    margin-top: rem(64);
+    font-size: rem(14);
+    text-align: center;
+    padding: 0 rem(32);
+    
+    @include mq('md'){
+        margin-top: rem(40);
+        text-align: center;
+    }
+}

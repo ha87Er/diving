@@ -1,0 +1,9 @@
+@use 'global' as *;
+
+.number-list{
+    list-style: decimal;
+    color: $font-color;
+    font-size: rem(16);
+    line-height: 32px;
+    margin-left: 1em;
+}

@@ -1,0 +1,21 @@
+@use 'global' as *;
+
+.contact-completion__inner.inner{
+    max-width: rem(700);
+    width: 100%;
+    margin: auto;
+}
+
+.contact-completion__title{
+    color: $font-color;
+    text-align: center;
+    font-size: rem(16);
+    font-weight: $normal;
+}
+
+.contact-completion__text{
+    color: $font-color;
+    text-align: center;
+    font-size: rem(16);
+    margin-top: rem(40);
+}

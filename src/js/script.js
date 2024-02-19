@@ -107,8 +107,6 @@ jQuery(window).on("scroll", function () {
 });
 
 //画像の上のアニメーション
-
-//inviewメソッド
 $('.inview').css({ 'opacity':'0'}); 
 $('.inview').on('inview', function() {
   $(this).animate({'opacity':'1'},2000,'easeOutCirc'); 
@@ -253,8 +251,37 @@ jQuery(function ($) {
   });
 });
 
+//tableスタイルの切り替え
+$(document).ready(function() {
+  function adjustColspan() {
+    if ($(window).width() > 768) {
+      $('th.table__title').attr('rowspan', '10').removeAttr('colspan');
+    } else {
+      $('th.table__title').attr('colspan', '2').removeAttr('rowspan');
+    }
+  }
 
+  // 初回実行
+  adjustColspan();
 
+  // ウィンドウリサイズ時に実行
+  $(window).resize(function() {
+    adjustColspan();
+  });
+});
+
+//FAQ
+jQuery(".js-accordion").on("click", function (e) {
+  e.preventDefault();
+
+  if (jQuery(this).parent().hasClass("is-open")) {
+    jQuery(this).parent().removeClass("is-open");
+    jQuery(this).next().slideUp();
+  } else {
+    jQuery(this).parent().addClass("is-open");
+    jQuery(this).next().slideDown();
+  }
+});
 
 });
 
