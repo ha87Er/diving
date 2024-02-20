@@ -1,5 +1,17 @@
 @use 'global' as *;
 
+.lower-information__wrap{
+    max-width: calc(rem(600) + rem(15)*2);
+    width: 100%;
+    padding-left: rem(15);
+    padding-right: rem(15);
+    margin: auto;
+
+    @include mq('md'){
+        max-width: 100%;
+    }
+}
+
 .lower-information__tabs{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -14,21 +26,57 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    color: $accent-color;
-    text-align: center;
-    font-size: rem(14);
     background-color: $sub-color;
     padding: rem(10) 0;
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+
+    @include mq('md'){
+        padding: rem(26) 0;
+    }
 }
+
+.lower-information__tab p{
+    color: $accent-color;
+    font-size: rem(14);
+    text-align: center;
+
+    @include mq('md'){
+        padding-left: rem(72);
+        position: relative;
+        font-size: rem(24);
+    }
+}
+
+.lower-information__tab p::before{
+
+    @include mq('md'){
+        content: "";
+        width: rem(64);
+        height: rem(64);
+        background: url(../images/common/icon-whale.svg);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+}
+
 
 .lower-information__tab.is-active{
     background-color: $accent-color;
+}
+
+.lower-information__tab.is-active p{
     color: $white;
+    
+}
+
+.lower-information__tab.is-active p::before{
+    background: url(../images/common/icon-whale_active.svg);
 }
 
 .lower-information__cards{
-    margin-top: rem(16);
+    margin-top: rem(14);
 
     @include mq('md'){
         margin-top: rem(24);

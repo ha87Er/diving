@@ -16,6 +16,15 @@
     position: relative;
 }
 
+.campaign-card__image.campaign-card__image--side::before{
+    padding-top: 63.945%;
+
+    @include mq('md'){
+    padding-top: 62.945%;
+        
+    }
+}
+
 .campaign-card__image::before{
     content: "";
     display: block;
@@ -45,6 +54,18 @@
     }
 }
 
+.campaign-card__body.campaign-card__body--lower{
+        padding: rem(16) rem(16) rem(24);
+
+    @include mq('md'){
+        padding: rem(24) rem(24) rem(45);
+    }
+}
+
+.campaign-card__body.campaign-card__body--side{
+    padding: rem(16) rem(24) rem(24);
+}
+
 .campaign-card__tag{
     display: inline-block;
     color: $accent-color;
@@ -55,6 +76,14 @@
 
     @include mq('md'){
         padding: rem(5) rem(14);
+        
+    }
+}
+
+.campaign-card__tag.campaign-card__tag--lower{
+    
+    @include mq('md'){
+        padding: rem(3) rem(16);
         
     }
 }
@@ -74,11 +103,14 @@
     
     @include mq('md'){
         font-size: rem(24);
+        margin-top: rem(9);
     }
 }
 
 .campaign-card__title.campaign-card__title--center{
     text-align: center;
+    margin-top: 0;
+    padding-bottom: rem(6);
 }
 
 .campaign-card__text{
@@ -89,8 +121,14 @@
     text-align: center;
 
     @include mq('md'){
-        font-size: rem(16);
-        margin-top: rem(16);
+        font-size: rem(14);
+        margin-top: rem(8);
+    }
+}
+
+.campaign-card__text.campaign-card__text--lower{
+    @include mq('md'){
+        margin-top: rem(24);
     }
 }
 
@@ -101,6 +139,13 @@
     justify-content: center;
 
     @include mq('md'){
+    }
+}
+
+.campaign-card__price.campaign-card__price--side{
+
+    @include mq('md'){
+        margin-top: rem(4);
     }
 }
 
@@ -118,6 +163,13 @@
     }
 }
 
+.campaign-card__price-before.campaign-card__price-before--side{
+
+    @include mq('md'){
+        font-size: rem(20);
+    }
+}
+
 .campaign-card__price-after{
     color: $accent-color;
     font-family: $fourth-font-family;
@@ -130,6 +182,21 @@
         font-size: rem(40);
         line-height: 40px;
         margin-left: rem(25);
+    }
+}
+
+.campaign-card__price-after.campaign-card__price-after--side{
+
+    @include mq('md'){
+        font-size: rem(31);
+        margin-left: rem(18);
+    }
+}
+
+.campaign-card__price-after.campaign-card__price-after--lower{
+
+    @include mq('md'){
+        margin-left: rem(40);
     }
 }
 

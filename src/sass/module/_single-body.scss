@@ -15,10 +15,11 @@
     font-family: $third-font-family;
     font-size: rem(14);
     line-height: 18px;
+    vertical-align: top;
 }
 
 .single-body__title{
-    margin-top: rem(8);
+    margin-top: rem(2);
 }
 
 .single-body__image{
@@ -63,7 +64,7 @@
     list-style-position: inside;
     color: $font-color;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.7;
 }
 
 .single-body__link{

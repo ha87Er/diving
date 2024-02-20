@@ -1,19 +1,19 @@
 @use 'global' as *;
 
-.contact-completion__inner.inner{
+.contact-thanks__inner.inner{
     max-width: rem(700);
     width: 100%;
     margin: auto;
 }
 
-.contact-completion__title{
+.contact-thanks__title{
     color: $font-color;
     text-align: center;
     font-size: rem(16);
     font-weight: $normal;
 }
 
-.contact-completion__text{
+.contact-thanks__text{
     color: $font-color;
     text-align: center;
     font-size: rem(16);

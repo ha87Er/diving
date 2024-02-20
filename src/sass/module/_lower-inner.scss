@@ -1,0 +1,24 @@
+@use 'global' as *;
+
+.lower-inner{
+    position: relative;
+}
+
+.lower-inner::before{
+    content: "";
+    display: block;
+    width: rem(120);
+    height: rem(55);
+    position: absolute;
+    top: rem(-25);
+    left: calc(50% - min(48vw, rem(172)));
+    background: url(../images/common/accent_fish2.svg) no-repeat center center / contain;
+    z-index: -1;
+
+    @include mq('md'){
+        width: rem(301);
+        height: rem(138);
+        top: rem(-70);
+        left: calc(50% - min(48vw, rem(621)));
+    }
+}

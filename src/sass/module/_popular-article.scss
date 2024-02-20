@@ -1,15 +1,7 @@
 @use 'global' as *;
 
-.popular-article{
-
-}
-
-.popular-article__side-title{
-
-}
-
 .popular-article__cards{
-    margin-top: rem(30);
+    margin-top: rem(25);
 }
 
 .popular-article__card:not(:first-child){

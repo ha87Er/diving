@@ -3,21 +3,32 @@
 
 .lower-campaign__cards{
     display: grid;
-    gap: rem(40);
+    gap: rem(38);
     justify-content: center;
-    margin-top: rem(46);
+    grid-template-columns: 1fr;
+    max-width: rem(280);
+    width: 100%;
+    margin: rem(40) auto 0;
+
+    @include mq('sm'){
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: rem(40);
+      row-gap: rem(80);
+      max-width: 100%;
+    }
 
     @include mq('md'){
         grid-template-columns: repeat(2, 1fr);
         column-gap: rem(40);
         row-gap: rem(80);
+        max-width: 100%;
+        margin-top: rem(40);
     }
 
 }
 
 .lower-campaign__card{
-  max-width: rem(280);
-  width: 100%;
+ width: 100%;
 
   @include mq('md'){
     max-width: rem(520);

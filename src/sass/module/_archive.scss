@@ -1,15 +1,11 @@
 @use 'global' as *;
 
-.archive{
-
-}
-
 .archive__title{
     text-align: center;
 }
 
 .archive__wrap{
-    margin-top: rem(30);
+    margin-top: rem(24);
 }
 
 .archive__list a,
@@ -17,12 +13,12 @@
     color: $accent-color;
     font-size: rem(24);
     font-weight: $normal;
-    padding-left: rem(32);
+    padding-left: rem(31);
     position: relative;
 }
 
 .archive__under-lists{
-    text-indent: rem(24);
+    text-indent: rem(29);
 }
 
 .archive__list a::before{
@@ -37,7 +33,7 @@
 }
 
 .archive__under-list a{
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 .archive__under-list a::before{

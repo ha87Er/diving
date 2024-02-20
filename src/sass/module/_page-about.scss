@@ -4,30 +4,10 @@
     max-width: calc(rem(600) + calc(rem(15) * 2));
     width: 100%;
     margin: auto;
-    position: relative;
 
     @include mq('md'){
         width: 100%;
     }
-}
-
-.page-about__inner::before{
-    content: "";
-    display: block;
-    width: rem(120);
-    height: rem(55);
-    position: absolute;
-    top: rem(-90);
-    left: calc(50% - min(48vw, rem(637)));
-    background: url(../images/common/accent_fish2.png) no-repeat center center / contain;
-    z-index: 1;
-
-    @include mq('md'){
-        width: rem(301);
-        height: rem(138);
-
-    }
-
 }
 
 .page-about__accent{
@@ -51,7 +31,7 @@
     display: flex;
 
     @include mq('md'){
-        margin-top: rem(178);
+        margin-top: rem(150);
     }
 }
 
@@ -95,12 +75,13 @@
 
     @include mq('md'){
         position: absolute;
-        top: rem(268);
-        left: calc(50% - rem(341));
+        top: rem(200);
+        left: calc(50% - rem(338));
         display: flex;
         gap: rem(40);
         z-index: 10;
         max-width: rem(840);
+        align-items: center;
     }
 
 }
@@ -112,8 +93,8 @@
     font-weight: $normal;
     line-height: 1;
     position: absolute;
-    top: 6.95%;
-    left: 6.95%;
+    top: rem(24);
+    left: rem(39);
 
     @include mq('md'){
         position: static;

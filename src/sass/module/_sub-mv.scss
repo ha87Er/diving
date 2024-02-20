@@ -39,8 +39,9 @@
     font-weight: 400;
     z-index: 1;
     white-space: nowrap;
-
+    
     @include mq('md'){
+        top: calc(50% + rem(50));
         font-size: rem(80);
     }
 
