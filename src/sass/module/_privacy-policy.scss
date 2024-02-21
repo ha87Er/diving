@@ -1,9 +1,17 @@
 @use 'global' as *;
 
 .privacy-policy__inner.inner{
-    max-width: rem(800);
+    max-width: calc(rem(600) + rem(15)*2);
     width: 100%;
     margin: auto;
+    padding: 0 rem(15);
+
+    @include mq('md'){
+        max-width: calc(rem(800) + rem(25)*2);
+        width: 100%;
+        margin: auto;
+        padding: 0 rem(25);
+    }
 }
 
 .privacy-policy__title{

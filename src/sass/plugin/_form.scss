@@ -11,7 +11,7 @@ $back-cr: #fff;//input（テキスト系）の背景色
 /*サイズ等の指定*/
 $fz: rem(16);//入力するときのfont-size
 $padding-und: rem(8);//paddingの指定（上下） inputの内側の余白で使う
-// $padding-lnr: rem(16);//paddingの指定（左右） inputの内側の余白で使う
+$padding-lnr: rem(15);//paddingの指定（左右） inputの内側の余白で使う
 // $border-r: rem(8);//border-radius（テキスト系）
 
 /*ボタン系の指定*/
@@ -34,7 +34,7 @@ $radio-space-betweenRadio: rem(22);//ラジオボタンの間の距離
 
 /*チェックボックスの指定*/
 $check-fz: rem(14);//フォントサイズ
-$check-size: rem(22);//外枠の幅高さ
+$check-size: rem(16);//外枠の幅高さ
 $check-bg-cr: #fff;//外枠の背景色
 $check-border-cr: #408F95;//外枠の色
 $check-bg-cr-inner: #C94800;//チェックマークの背景色
@@ -43,7 +43,7 @@ $check-space-betweenRadio: rem(14);//チェックボタンの間の距離
 $check-weight: 2px;//チェックマークの線の太さ(px)
 
 /* テキストエリアの指定 */
-$textarea-height: rem(200);
+$textarea-height: rem(202);
 
 
 /*----- 共通エリアの指定 -----*/
@@ -184,22 +184,24 @@ input::placeholder {
 	+ span {
 		display: inline-block;
 		position: relative;
-		padding: 0 0 0 rem(30); //チェックボックス + 余白
+		padding: 0 0 0 rem(24); //チェックボックス + 余白
 		margin: 0;
 		font-size: $check-fz;
 		line-height: 1.5;
 		cursor: pointer;
 		text-align: left;
+		letter-spacing: 0.14em;
 
 		@include mq('md'){
 			font-size: rem(16);
+			letter-spacing: 0;
 		}
 		
         //チェックボックス外側
 		&::before {
 			position: absolute;
 			content: "";
-			top: rem(0);
+			top: rem(3);
 			left: rem(-1);
 			background: $check-bg-cr;
 			border: 1px solid $border-cr;
@@ -221,8 +223,8 @@ input::placeholder {
 		&::after {
 			content: "";
 			position: absolute;
-			top: rem(6);
-			left: rem(4);
+			top: rem(7);
+			left: rem(2);
 			display: block;
 			opacity: 1;
 			/*チェックマークじゃない場合は以下を変更する*/
@@ -265,15 +267,15 @@ select {
 
 	/*↓カスタム */
     // margin-top: rem(10);
-	font-size: rem(14);
-	padding: $padding-und;
+	font-size: rem(12);
+	padding: rem(11) rem(8);
 	background-color: $back-cr;
     border: rem(1) solid $border-cr;
 
 	/*↓デフォルトのアイコンを消す場合はコメントアウト（noneにする）*/
 	appearance: none;
 	/*↓デフォルトではないアイコンを使う場合は入力する*/
-	// background: url(../images/common/icon-arrow.svg)no-repeat center right 14px /13.217px 10.182px;
+	background: url(../images/common/polygon.svg)no-repeat center right 9px /12px 10px;
     
 	&:focus {
         background-color: $back-cr;
@@ -319,14 +321,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 textarea {
 	height: $textarea-height;
     width: 100%;
-    // max-width: rem(600);
 	transition: border 0.3s;
     resize: none;
 	border: rem(1) solid $border-cr;
 
 
 	@include mq('md'){
-		margin-top: rem(10);
 		font-size: rem(16);
 	}
 

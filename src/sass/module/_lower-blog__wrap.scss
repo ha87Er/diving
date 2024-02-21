@@ -1,5 +1,17 @@
 @use 'global' as *;
 
+.lower-blog__inner.inner{
+    max-width: calc(rem(600) + rem(15)*2);
+    margin:auto;
+    padding: 0 rem(15);
+
+    @include mq('md'){
+        max-width: calc(rem(1080) + rem(25)*2);
+        margin:auto;
+        padding: 0 rem(25);
+    }
+}
+
 .lower-blog__wrap{
 
     @include mq('md'){
@@ -8,17 +20,23 @@
     }
 }
 
-.lower-blog__cards{
-
-}
-
-.lower-blog__side{
-    max-width: rem(294);
-    width: 100%;
-    margin: rem(80) auto 0;
+.lower-blog__content{
 
     @include mq('md'){
+        width: calc(100% - rem(380));
+    }
+}
+
+
+.lower-blog__side{
+    max-width: calc(rem(600) + rem(25)*2);
+    margin: rem(80) auto 0;
+    padding: 0 rem(25);
+
+    @include mq('md'){
+        max-width: rem(294);
         margin: 0 auto;
+        padding: 0;
     }
 }
 

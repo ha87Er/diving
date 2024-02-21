@@ -1,14 +1,15 @@
 @use 'global' as *;
 
-.lower-information__wrap{
-    max-width: calc(rem(600) + rem(15)*2);
+.lower-information__inner.inner{
+    max-width: calc(rem(600) + rem(15) * 2);
     width: 100%;
-    padding-left: rem(15);
-    padding-right: rem(15);
-    margin: auto;
+    margin:auto;
+    padding: 0 rem(15);
 
     @include mq('md'){
-        max-width: 100%;
+        max-width: calc(rem(1080) + rem(25)*2);
+        margin:auto;
+        padding: 0 rem(25);
     }
 }
 

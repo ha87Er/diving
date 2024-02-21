@@ -45,10 +45,16 @@
     }
 }
 
+
+
 .voice-item__age{
     color: $font-color;
     font-size: rem(12);
     line-height: 18px;
+}
+
+.voice-item__age.voice-item__age--lower{
+    line-height: 1;
 }
 
 .voice-item__tag{
@@ -64,6 +70,10 @@
     }
 }
 
+.voice-item__tag.voice-item__tag--lower{
+    margin-top: rem(4);
+}
+
 .voice-item__title{
     color: $font-color;
     font-size: rem(16);
@@ -77,6 +87,10 @@
         padding-bottom: 0;
         margin-top: rem(8);
     }
+}
+
+.voice-item__title.voice-item__title--lower{
+    padding-bottom: rem(2);
 }
 
 .voice-item__image{

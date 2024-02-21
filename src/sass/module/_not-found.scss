@@ -1,7 +1,11 @@
 @use 'global' as *;
 
-.not-found__wrap{
+.not-found{
     background-color: $accent-color;
+    line-height: normal;
+}
+
+.not-found__wrap{
     padding: rem(88) 0 rem(40);
 
     @include mq('md'){
@@ -10,13 +14,10 @@
 }
 
 .not-found__content{
-    padding: rem(88) 0 rem(40);
-    background-color: $accent-color;
+    padding: rem(88) 0 rem(45);
     position: relative;
-    // height: 100%;
 
     @include mq('md'){
-        // min-height: rem(1000);
         padding: rem(98) 0 rem(148);
     }
 }
@@ -34,8 +35,8 @@
     @include mq('md'){
         width: rem(665);
         height: rem(665);
-        top: 50%;
-        left: calc(50% - min(48vw, rem(550)));
+        top: calc(50% + rem(50));
+        left: calc(50% - min(48vw, rem(530)));
         transform: translateY(-50%);
     }
 }
@@ -45,15 +46,18 @@
     font-family: $fourth-font-family;
     font-size: rem(80);
     font-weight: $normal;
-    letter-spacing: 0.4em;
+    letter-spacing: 0.5em;
     text-align: center;
     margin-top: rem(54);
     position: relative;
+    text-indent: rem(37);
+    line-height: 1.1;
 
     @include mq('md'){
         font-size: rem(160);
-        letter-spacing: 0.8em;
-        margin-top: rem(120);
+        letter-spacing: 0.5em;
+        margin-top: rem(125);
+        text-indent: rem(82);
     }
 }
 
@@ -64,6 +68,10 @@
     font-weight: $normal;
     font-size: rem(16);
     line-height: 24px;
+
+    @include mq('md'){
+        margin-top: rem(36);
+    }
 }
 
 .not-found__button{

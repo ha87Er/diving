@@ -91,18 +91,6 @@
 }
 
 .button.button--white::after{
-    // background: $white;
-    // border: 1px solid $accent-color;
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    // content: '';
-    // width: 100%;
-    // height: 100%;
-    // transform: scale(0, 1);
-    // transform-origin: left top;
-    // transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
-    // z-index: -1;
     display: none;
 }
 
@@ -118,6 +106,11 @@
     border-color: inherit;
 }
 
-// .button.button--white:hover::after {
-//     transform: scale(1, 1);
-// }
+// フォームボタン
+.button.button--form{
+    padding: rem(16) rem(58) rem(16) rem(56);
+}
+
+.button.button--form p{
+    padding-right: rem(52);
+}

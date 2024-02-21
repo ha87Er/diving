@@ -1,21 +1,15 @@
 @use 'global' as *;
 
-.lower-voice__inner.inner{
+.sitemap__inner.inner{
     max-width: calc(rem(600) + rem(15)*2);
-    margin:auto;
+    width: 100%;
+    margin: auto;
     padding: 0 rem(15);
 
     @include mq('md'){
         max-width: calc(rem(1080) + rem(25)*2);
-        margin:auto;
+        width: 100%;
+        margin: auto;
         padding: 0 rem(25);
-    }
-}
-
-.lower-voice__cards{
-        margin-top: rem(40);
-
-    @include mq('md'){
-        margin-top: rem(35);
     }
 }

@@ -254,7 +254,7 @@ jQuery(function ($) {
 //tableスタイルの切り替え
 $(document).ready(function() {
   function adjustColspan() {
-    if ($(window).width() > 768) {
+    if ($(window).width() > 600) {
       $('th.table__title').attr('rowspan', '10').removeAttr('colspan');
     } else {
       $('th.table__title').attr('colspan', '2').removeAttr('rowspan');

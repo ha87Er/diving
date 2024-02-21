@@ -8,6 +8,7 @@
 
     @include mq('md'){
         flex-direction: row;
+        padding-bottom: rem(37);
     }
 }
 
@@ -46,21 +47,21 @@
     background: #C94800;
     font-size: rem(12);
     margin-left: rem(8);
-    padding:  0 rem(12);
+    padding:  rem(1) rem(8) rem(1) rem(16);
     display: inline-block;
     line-height: 1.5;
     letter-spacing: 0.48em;
+    vertical-align: top;
 
     @include mq('md'){
     }
 }
 
 .contact-form__item dd{
-        margin-top: rem(20);
+        margin-top: rem(12);
         color: $font-color;
 
     @include mq('md'){
-        // width: calc(100% - rem(210));
         margin-top: 0;
         flex: 1;
     }
@@ -81,13 +82,33 @@
 }
 
 .contact-form__privacy{
-    margin-top: rem(64);
+    margin-top: rem(40);
     font-size: rem(14);
     text-align: center;
     padding: 0 rem(32);
+    letter-spacing: normal;
     
     @include mq('md'){
-        margin-top: rem(40);
+        margin-top: rem(73);
         text-align: center;
     }
+}
+
+.contact-form__privacy [type="checkbox"]{
+
+    + span {
+        padding-left: rem(38);
+        letter-spacing: normal;
+        font-size: rem(14);
+
+
+
+        //チェックボックス外側
+		&::before {
+			width: 22px;
+			height: 22px;
+            top: rem(1);
+		}
+	}
+
 }

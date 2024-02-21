@@ -11,6 +11,7 @@
 }
 
 .voice-items.voice-items--lower-voice{
+    gap: rem(42);
 
     @include mq('md'){
         column-gap: rem(40);

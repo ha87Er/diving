@@ -10,13 +10,13 @@
 
 .faq-item__head{
     background-color: $accent-color;
-    padding: rem(16);
+    padding: rem(13)rem(16);
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     @include mq('md'){
-        padding: rem(25) rem(40);
+        padding: rem(24) rem(40);
     }
 }
 
@@ -66,10 +66,10 @@
 .faq-item__body{
     display: none;
     border: 1px solid $accent-color;
-    padding: rem(24) rem(16);
+    padding: rem(20) rem(16);
 
     @include mq('md'){
-        padding: rem(40);
+        padding: rem(36) rem(40);
         margin-top: rem(16);
     }
 }

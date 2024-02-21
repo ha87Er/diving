@@ -1,11 +1,14 @@
 @use 'global' as *;
 
 .lower-contact__inner.inner{
-    max-width: rem(700);
+    max-width: calc(rem(600) + rem(15) * 2);
     width: 100%;
-    margin: auto;
-}
+    margin:auto;
+    padding: 0 rem(15);
 
-.lower-contact__form{
-
+    @include mq('md'){
+        max-width: calc(rem(700) + rem(25)*2);
+        margin:auto;
+        padding: 0 rem(25);
+    }
 }
