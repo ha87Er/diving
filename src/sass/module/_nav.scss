@@ -44,7 +44,6 @@
 .nav__right.nav__right--sitemap{
 
     @include mq('md'){
-        // margin-left: rem(128);
         margin-left: rem(96);
     }
 }
@@ -84,7 +83,6 @@
 .nav__left.nav__left--sitemap .nav__wrap:nth-child(2){
 
     @include mq('md'){
-        // margin-left: rem(144);
         margin-left: rem(96);
     }
 }
@@ -99,7 +97,6 @@
 .nav__right.nav__right--sitemap .nav__wrap:nth-child(2){
 
     @include mq('md'){
-        // margin-left: rem(112);
         margin-left: rem(96);
     }
 }

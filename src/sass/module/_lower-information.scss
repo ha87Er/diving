@@ -36,21 +36,21 @@
     }
 }
 
-.lower-information__tab p{
+.lower-information__tab span{
     color: $accent-color;
     font-size: rem(14);
     text-align: center;
 
-    @include mq('md'){
+    @include mq('lg'){
         padding-left: rem(72);
         position: relative;
         font-size: rem(24);
     }
 }
 
-.lower-information__tab p::before{
+.lower-information__tab span::before{
 
-    @include mq('md'){
+    @include mq('lg'){
         content: "";
         width: rem(64);
         height: rem(64);
@@ -67,12 +67,12 @@
     background-color: $accent-color;
 }
 
-.lower-information__tab.is-active p{
+.lower-information__tab.is-active span{
     color: $white;
     
 }
 
-.lower-information__tab.is-active p::before{
+.lower-information__tab.is-active span::before{
     background: url(../images/common/icon-whale_active.svg);
 }
 

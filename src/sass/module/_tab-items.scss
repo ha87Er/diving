@@ -2,7 +2,6 @@
 
 .tab-items{
     display: grid;
-    // gap: rem(20);
     grid-template-columns: repeat(2, 1fr);
     column-gap: rem(20);
     row-gap: rem(16);

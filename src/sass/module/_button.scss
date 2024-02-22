@@ -11,7 +11,8 @@
     text-align: center;
 }
 
-.button p{
+.button span{
+    display: block;
     color: $white;
     font-family: $third-font-family;
     font-weight: $normal;
@@ -21,7 +22,7 @@
     position: relative;
 }
 
-.button p::before{
+.button span::before{
     content:"";
     width: rem(40);
     height: rem(6);
@@ -60,11 +61,11 @@
     z-index: -1;
 }
 
-.button:hover p{
+.button:hover span{
     color: $accent-color;
 }
 
-.button:hover p::before{
+.button:hover span::before{
     border-color: $accent-color;
 }
 
@@ -77,11 +78,11 @@
     background-color: $white;
 }
 
-.button.button--white p{
+.button.button--white span{
     color: $accent-color;
 }
 
-.button.button--white p::before{
+.button.button--white span::before{
     border-right: 2px solid $accent-color;
     border-bottom: 1px solid $accent-color;
 }
@@ -98,19 +99,21 @@
     opacity: 0.8;
 }
 
-.button.button--white:hover p{
+.button.button--white:hover span{
     color: inherit;
 }
 
-.button.button--white:hover p::before{
+.button.button--white:hover span::before{
     border-color: inherit;
 }
 
 // フォームボタン
 .button.button--form{
     padding: rem(16) rem(58) rem(16) rem(56);
+
 }
 
-.button.button--form p{
+.button.button--form span{
     padding-right: rem(52);
 }
+

@@ -93,7 +93,10 @@ jQuery(window).on("scroll", function () {
   } else {
     jQuery("#js-pagetop").removeClass("is-show");
   }
+});
 
+
+jQuery(window).on("scroll", function () {
   var point = $(window).scrollTop();
   var docHeight = $(document.body).height();
   var dispHeight = $(window).height();
@@ -105,6 +108,7 @@ jQuery(window).on("scroll", function () {
     jQuery("#js-pagetop").removeClass("is-hidden");
   }
 });
+
 
 //画像の上のアニメーション
 $('.inview').css({ 'opacity':'0'}); 

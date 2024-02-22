@@ -109,6 +109,19 @@
 			height: 22px;
             top: rem(1);
 		}
+
 	}
 
+}
+
+.contact-form__privacy [type=checkbox]:checked{
+
+    + span{
+        &::after{
+            width: 12px;
+            height: 6px;
+            top: 7px;
+            left: 3px;
+        }
+    }
 }
