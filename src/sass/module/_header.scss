@@ -1,12 +1,12 @@
 @use 'global' as *;
 
 .header{
-    height: rem(80);
+    height: 80px;
     background: rgba(13, 41, 54, 0.68);
     width: 100%;
 
     @include mq('md'){
-        height: rem(90);
+        height: 90px;
     }
 }
 

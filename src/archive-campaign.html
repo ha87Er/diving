@@ -42,7 +42,7 @@
       </a>
       <nav class="header__nav">
        <ul class="header__nav-items">
-          <li class="header__nav-item"><a href="./archive-campaign.html">Campaign<span>キャンペーン</span></a></li>
+          <li class="header__nav-item"><a href="./archive-campaign.html?active-tab=ALL">Campaign<span>キャンペーン</span></a></li>
           <li class="header__nav-item"><a href="./page-about.html">About us<span>私たちについて</span></a></li>
           <li class="header__nav-item"><a href="./page-information.html">Information<span>ダイビング情報</span></a></li>
           <li class="header__nav-item"><a href="./home.html">Blog<span>ブログ</span></a></li>
@@ -64,10 +64,10 @@
             <div class="nav__left">
               <div class="nav__wrap">
                 <ul class="nav__items">
-                  <li class="nav__item nav__item--bold"><a href="./archive-campaign.html">キャンペーン</a></li>
-                  <li class="nav__item"><a href="./archive-campaign.html">ライセンス取得</a></li>
-                  <li class="nav__item"><a href="./archive-campaign.html">貸切体験ダイビング</a></li>
-                  <li class="nav__item"><a href="./archive-campaign.html">ナイトダイビング</a></li>
+                  <li class="nav__item nav__item--bold"><a href="./archive-campaign.html?active-tab=ALL">キャンペーン</a></li>
+                  <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab1">ライセンス取得</a></li>
+                  <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab3">貸切体験ダイビング</a></li>
+                  <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab2">ナイトダイビング</a></li>
                 </ul>
                 <ul class="nav__items">
                   <li class="nav__item nav__item--bold"><a href="./page-about.html">私たちについて</a></li>
@@ -76,9 +76,9 @@
               <div class="nav__wrap">
                 <ul class="nav__items">
                   <li class="nav__item  nav__item--bold"><a href="./page-information.html">ダイビング情報</a></li>
-                  <li class="nav__item"><a href="./page-information.html">ライセンス講習</a></li>
-                  <li class="nav__item"><a href="./page-information.html">体験ダイビング</a></li>
-                  <li class="nav__item"><a href="./page-information.html">ファンダイビング</a></li>
+                  <li class="nav__item"><a href="./page-information.html?active-tab=tab1">ライセンス講習</a></li>
+                  <li class="nav__item"><a href="./page-information.html?active-tab=tab3">体験ダイビング</a></li>
+                  <li class="nav__item"><a href="./page-information.html?active-tab=tab2">ファンダイビング</a></li>
                 </ul>
                 <ul class="nav__items">
                   <li class="nav__item nav__item--bold"><a href="./home.html">ブログ</a></li>
@@ -92,9 +92,10 @@
                 </ul>
                 <ul class="nav__items">
                   <li class="nav__item nav__item--bold"><a href="./page-price.html">料金一覧</a></li>
-                  <li class="nav__item"><a href="./page-price.html">ライセンス講習</a></li>
-                  <li class="nav__item"><a href="./page-price.html">体験ダイビング</a></li>
-                  <li class="nav__item"><a href="./page-price.html">ファンダイビング</a></li>
+                  <li class="nav__item"><a href="./page-price.html#licence">ライセンス講習</a></li>
+                  <li class="nav__item"><a href="./page-price.html#experience">体験ダイビング</a></li>
+                  <li class="nav__item"><a href="./page-price.html#fan">ファンダイビング</a></li>
+                  <li class="nav__item"><a href="./page-price.html#special">スペシャルダイビング</a></li>
                 </ul>
               </div>
               <div class="nav__wrap">
@@ -137,13 +138,13 @@
 <div class="lower-campaign layout-lower-campaign">
   <div class="lower-campaign__inner lower-inner inner">
     <div class="lower-campaign__tab-wrap tab-items">
-      <button class="lower-campaign__tab tab-items__tab is-active" data-filter="all">ALL</button>
-      <button class="lower-campaign__tab tab-items__tab" data-filter="license">ライセンス講習</button>
-      <button class="lower-campaign__tab tab-items__tab" data-filter="fan-diving">ファンダイビング</button>
-      <button class="lower-campaign__tab tab-items__tab" data-filter="experience-diving">体験ダイビング</button>
+      <button class="tab-items__tab" data-tab="ALL">ALL</button>
+      <button class="tab-items__tab js-tab-switch" data-tab="tab1">ライセンス講習</button>
+      <button class="tab-items__tab js-tab-switch" data-tab="tab2">ファンダイビング</button>
+      <button class="tab-items__tab js-tab-switch" data-tab="tab3">体験ダイビング</button>
     </div>
     <div class="lower-campaign__cards">
-      <div class="lower-campaign__card campaign-card" data-category="license">
+      <div class="lower-campaign__card campaign-card js-tab-cts" data-tab="tab1">
         <div class="campaign-card__image">
           <img src="./assets/images/common/campaign_img1.jpg" alt="水槽に黄色と黒の縞模様の熱帯魚がたくさん泳いでいる">
         </div>
@@ -170,7 +171,7 @@
           </div>
         </div>
       </div>
-      <div class="lower-campaign__card campaign-card" data-category="experience-diving">
+      <div class="lower-campaign__card campaign-card js-tab-cts" data-tab="tab3">
         <div class="campaign-card__image">
           <img src="./assets/images/common/campaign_img2.jpg" alt="山が見える透明度が高い綺麗な海に船が２隻浮かんでいる">
         </div>
@@ -197,7 +198,7 @@
           </div>
         </div>
       </div>
-      <div class="lower-campaign__card campaign-card" data-category="experience-diving">
+      <div class="lower-campaign__card campaign-card js-tab-cts" data-tab="tab3">
         <div class="campaign-card__image">
           <img src="./assets/images/common/campaign_img3.jpg" alt="たくさんのクラゲが照明の暗い水槽を泳いでいる">
         </div>
@@ -224,7 +225,7 @@
           </div>
         </div>
       </div>
-      <div class="lower-campaign__card campaign-card" data-category="fan-diving">
+      <div class="lower-campaign__card campaign-card js-tab-cts" data-tab="tab2">
         <div class="campaign-card__image">
           <img src="./assets/images/common/campaign_img4.jpg" alt="仲間たちとダイビングをする姿">
         </div>
@@ -260,7 +261,7 @@
           <a class="page smaller" href="#">2</a>
           <a class="page smaller" href="#">3</a>
           <a class="page smaller" href="#">4</a>
-          <a class="nextpostslink " rel="next" href=""></a>
+          <a class="nextpostslink" rel="next" href=""></a>
       </div>
     </div>
   </div>
@@ -322,10 +323,10 @@
       <div class="nav__left">
         <div class="nav__wrap">
           <ul class="nav__items">
-            <li class="nav__item nav__item--bold"><a href="./archive-campaign.html">キャンペーン</a></li>
-            <li class="nav__item"><a href="./archive-campaign.html">ライセンス取得</a></li>
-            <li class="nav__item"><a href="./archive-campaign.html">貸切体験ダイビング</a></li>
-            <li class="nav__item"><a href="./archive-campaign.html">ナイトダイビング</a></li>
+            <li class="nav__item nav__item--bold"><a href="./archive-campaign.html?active-tab=ALL">キャンペーン</a></li>
+            <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab1">ライセンス取得</a></li>
+            <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab3">貸切体験ダイビング</a></li>
+            <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab2">ナイトダイビング</a></li>
           </ul>
           <ul class="nav__items">
             <li class="nav__item nav__item--bold"><a href="./page-about.html">私たちについて</a></li>
@@ -334,9 +335,9 @@
         <div class="nav__wrap">
           <ul class="nav__items">
             <li class="nav__item  nav__item--bold"><a href="./page-information.html">ダイビング情報</a></li>
-            <li class="nav__item"><a href="./page-information.html">ライセンス講習</a></li>
-            <li class="nav__item"><a href="./page-information.html">体験ダイビング</a></li>
-            <li class="nav__item"><a href="./page-information.html">ファンダイビング</a></li>
+            <li class="nav__item"><a href="./page-information.html?active-tab=tab1">ライセンス講習</a></li>
+            <li class="nav__item"><a href="./page-information.html?active-tab=tab3">体験ダイビング</a></li>
+            <li class="nav__item"><a href="./page-information.html?active-tab=tab2">ファンダイビング</a></li>
           </ul>
           <ul class="nav__items">
             <li class="nav__item nav__item--bold"><a href="./home.html">ブログ</a></li>
@@ -350,9 +351,10 @@
           </ul>
           <ul class="nav__items">
             <li class="nav__item nav__item--bold"><a href="./page-price.html">料金一覧</a></li>
-            <li class="nav__item"><a href="./page-price.html">ライセンス講習</a></li>
-            <li class="nav__item"><a href="./page-price.html">体験ダイビング</a></li>
-            <li class="nav__item"><a href="./page-price.html">ファンダイビング</a></li>
+            <li class="nav__item"><a href="./page-price.html#licence">ライセンス講習</a></li>
+            <li class="nav__item"><a href="./page-price.html#experience">体験ダイビング</a></li>
+            <li class="nav__item"><a href="./page-price.html#fan">ファンダイビング</a></li>
+            <li class="nav__item"><a href="./page-price.html#special">スペシャルダイビング</a></li>
           </ul>
         </div>
         <div class="nav__wrap">

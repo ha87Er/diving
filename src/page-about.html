@@ -42,7 +42,7 @@
       </a>
       <nav class="header__nav">
        <ul class="header__nav-items">
-          <li class="header__nav-item"><a href="./archive-campaign.html">Campaign<span>キャンペーン</span></a></li>
+          <li class="header__nav-item"><a href="./archive-campaign.html?active-tab=ALL">Campaign<span>キャンペーン</span></a></li>
           <li class="header__nav-item"><a href="./page-about.html">About us<span>私たちについて</span></a></li>
           <li class="header__nav-item"><a href="./page-information.html">Information<span>ダイビング情報</span></a></li>
           <li class="header__nav-item"><a href="./home.html">Blog<span>ブログ</span></a></li>
@@ -64,10 +64,10 @@
             <div class="nav__left">
               <div class="nav__wrap">
                 <ul class="nav__items">
-                  <li class="nav__item nav__item--bold"><a href="./archive-campaign.html">キャンペーン</a></li>
-                  <li class="nav__item"><a href="./archive-campaign.html">ライセンス取得</a></li>
-                  <li class="nav__item"><a href="./archive-campaign.html">貸切体験ダイビング</a></li>
-                  <li class="nav__item"><a href="./archive-campaign.html">ナイトダイビング</a></li>
+                  <li class="nav__item nav__item--bold"><a href="./archive-campaign.html?active-tab=ALL">キャンペーン</a></li>
+                  <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab1">ライセンス取得</a></li>
+                  <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab3">貸切体験ダイビング</a></li>
+                  <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab2">ナイトダイビング</a></li>
                 </ul>
                 <ul class="nav__items">
                   <li class="nav__item nav__item--bold"><a href="./page-about.html">私たちについて</a></li>
@@ -76,9 +76,9 @@
               <div class="nav__wrap">
                 <ul class="nav__items">
                   <li class="nav__item  nav__item--bold"><a href="./page-information.html">ダイビング情報</a></li>
-                  <li class="nav__item"><a href="./page-information.html">ライセンス講習</a></li>
-                  <li class="nav__item"><a href="./page-information.html">体験ダイビング</a></li>
-                  <li class="nav__item"><a href="./page-information.html">ファンダイビング</a></li>
+                  <li class="nav__item"><a href="./page-information.html?active-tab=tab1">ライセンス講習</a></li>
+                  <li class="nav__item"><a href="./page-information.html?active-tab=tab3">体験ダイビング</a></li>
+                  <li class="nav__item"><a href="./page-information.html?active-tab=tab2">ファンダイビング</a></li>
                 </ul>
                 <ul class="nav__items">
                   <li class="nav__item nav__item--bold"><a href="./home.html">ブログ</a></li>
@@ -92,9 +92,10 @@
                 </ul>
                 <ul class="nav__items">
                   <li class="nav__item nav__item--bold"><a href="./page-price.html">料金一覧</a></li>
-                  <li class="nav__item"><a href="./page-price.html">ライセンス講習</a></li>
-                  <li class="nav__item"><a href="./page-price.html">体験ダイビング</a></li>
-                  <li class="nav__item"><a href="./page-price.html">ファンダイビング</a></li>
+                  <li class="nav__item"><a href="./page-price.html#licence">ライセンス講習</a></li>
+                  <li class="nav__item"><a href="./page-price.html#experience">体験ダイビング</a></li>
+                  <li class="nav__item"><a href="./page-price.html#fan">ファンダイビング</a></li>
+                  <li class="nav__item"><a href="./page-price.html#special">スペシャルダイビング</a></li>
                 </ul>
               </div>
               <div class="nav__wrap">
@@ -160,22 +161,22 @@
       <h2 class="title__ja">フォト</h2>
     </div>
     <div class="gallery__image-warp">
-      <div class="gallery__image js-modal-open"  data-target="1">
+      <div class="gallery__image js-modal-open">
         <img src="./assets/images/common/gallery_image1.jpg" alt="珊瑚礁に集まる赤い魚の群れ" width="345" height="523" loading="lazy">
       </div>
-      <div class="gallery__image js-modal-open" data-target="2">
+      <div class="gallery__image js-modal-open">
         <img src="./assets/images/common/gallery_image2.jpg" alt="綺麗な海に浮かぶ船" width="345" height="219" loading="lazy">
       </div>
-      <div class="gallery__image js-modal-open" data-target="3">
+      <div class="gallery__image js-modal-open">
         <img src="./assets/images/common/gallery_image3.jpg" alt="黄色い２匹の魚" width="345" height="219" loading="lazy">
       </div>
-      <div class="gallery__image js-modal-open" data-target="4">
+      <div class="gallery__image js-modal-open">
         <img src="./assets/images/common/gallery_image4.jpg" alt="ぷくっとした黄色い魚" width="345" height="219" loading="lazy">
       </div>
-      <div class="gallery__image js-modal-open" data-target="5">
+      <div class="gallery__image js-modal-open">
         <img src="./assets/images/common/gallery_image5.jpg" alt="海で泳ぐ魚の群れ" width="345" height="523" loading="lazy">
       </div>
-      <div class="gallery__image js-modal-open" data-target="6">
+      <div class="gallery__image js-modal-open">
         <img src="./assets/images/common/gallery_image6.jpg" alt="珊瑚礁の上で泳ぐ２匹の黄色い魚" width="345" height="523" loading="lazy">
       </div>
     </div>
@@ -183,36 +184,6 @@
     <div class="gallery__modal modal js-modal" id="1">
       <div class="modal__img">
         <img src="./assets/images/common/gallery_image1.jpg" alt="珊瑚礁に集まる赤い魚の群れ" width="345" height="523" loading="lazy">
-      </div>
-      <div class="modal__bg js-modal-close"></div>
-    </div>
-    <div class="gallery__modal modal js-modal" id="2">
-      <div class="modal__img">
-        <img src="./assets/images/common/gallery_image2.jpg" alt="綺麗な海に浮かぶ船" width="345" height="219" loading="lazy">
-      </div>
-      <div class="modal__bg js-modal-close"></div>
-    </div>
-    <div class="gallery__modal modal js-modal" id="3">
-      <div class="modal__img">
-        <img src="./assets/images/common/gallery_image3.jpg" alt="黄色い２匹の魚" width="345" height="219" loading="lazy">
-      </div>
-      <div class="modal__bg js-modal-close"></div>
-    </div>
-    <div class="gallery__modal modal js-modal" id="4">
-      <div class="modal__img">
-        <img src="./assets/images/common/gallery_image4.jpg" alt="ぷくっとした黄色い魚" width="345" height="219" loading="lazy">
-      </div>
-      <div class="modal__bg js-modal-close"></div>
-    </div>
-    <div class="gallery__modal modal js-modal" id="5">
-      <div class="modal__img">
-        <img src="./assets/images/common/gallery_image5.jpg" alt="海で泳ぐ魚の群れ" width="345" height="523" loading="lazy">
-      </div>
-      <div class="modal__bg js-modal-close"></div>
-    </div>
-    <div class="gallery__modal modal js-modal" id="6">
-      <div class="modal__img">
-        <img src="./assets/images/common/gallery_image6.jpg" alt="珊瑚礁の上で泳ぐ２匹の黄色い魚" width="345" height="523" loading="lazy">
       </div>
       <div class="modal__bg js-modal-close"></div>
     </div>
@@ -275,10 +246,10 @@
       <div class="nav__left">
         <div class="nav__wrap">
           <ul class="nav__items">
-            <li class="nav__item nav__item--bold"><a href="./archive-campaign.html">キャンペーン</a></li>
-            <li class="nav__item"><a href="./archive-campaign.html">ライセンス取得</a></li>
-            <li class="nav__item"><a href="./archive-campaign.html">貸切体験ダイビング</a></li>
-            <li class="nav__item"><a href="./archive-campaign.html">ナイトダイビング</a></li>
+            <li class="nav__item nav__item--bold"><a href="./archive-campaign.html?active-tab=ALL">キャンペーン</a></li>
+            <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab1">ライセンス取得</a></li>
+            <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab3">貸切体験ダイビング</a></li>
+            <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab2">ナイトダイビング</a></li>
           </ul>
           <ul class="nav__items">
             <li class="nav__item nav__item--bold"><a href="./page-about.html">私たちについて</a></li>
@@ -287,9 +258,9 @@
         <div class="nav__wrap">
           <ul class="nav__items">
             <li class="nav__item  nav__item--bold"><a href="./page-information.html">ダイビング情報</a></li>
-            <li class="nav__item"><a href="./page-information.html">ライセンス講習</a></li>
-            <li class="nav__item"><a href="./page-information.html">体験ダイビング</a></li>
-            <li class="nav__item"><a href="./page-information.html">ファンダイビング</a></li>
+            <li class="nav__item"><a href="./page-information.html?active-tab=tab1">ライセンス講習</a></li>
+            <li class="nav__item"><a href="./page-information.html?active-tab=tab3">体験ダイビング</a></li>
+            <li class="nav__item"><a href="./page-information.html?active-tab=tab2">ファンダイビング</a></li>
           </ul>
           <ul class="nav__items">
             <li class="nav__item nav__item--bold"><a href="./home.html">ブログ</a></li>
@@ -303,9 +274,10 @@
           </ul>
           <ul class="nav__items">
             <li class="nav__item nav__item--bold"><a href="./page-price.html">料金一覧</a></li>
-            <li class="nav__item"><a href="./page-price.html">ライセンス講習</a></li>
-            <li class="nav__item"><a href="./page-price.html">体験ダイビング</a></li>
-            <li class="nav__item"><a href="./page-price.html">ファンダイビング</a></li>
+            <li class="nav__item"><a href="./page-price.html#licence">ライセンス講習</a></li>
+            <li class="nav__item"><a href="./page-price.html#experience">体験ダイビング</a></li>
+            <li class="nav__item"><a href="./page-price.html#fan">ファンダイビング</a></li>
+            <li class="nav__item"><a href="./page-price.html#special">スペシャルダイビング</a></li>
           </ul>
         </div>
         <div class="nav__wrap">

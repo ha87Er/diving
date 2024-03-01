@@ -13,69 +13,6 @@
     }
 }
 
-.lower-information__tabs{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: rem(19);
-
-    @include mq('md'){
-        gap: rem(90);
-    }
-}
-
-.lower-information__tab{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $sub-color;
-    padding: rem(10) 0;
-    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
-
-    @include mq('md'){
-        padding: rem(26) 0;
-    }
-}
-
-.lower-information__tab span{
-    color: $accent-color;
-    font-size: rem(14);
-    text-align: center;
-
-    @include mq('lg'){
-        padding-left: rem(72);
-        position: relative;
-        font-size: rem(24);
-    }
-}
-
-.lower-information__tab span::before{
-
-    @include mq('lg'){
-        content: "";
-        width: rem(64);
-        height: rem(64);
-        background: url(../images/common/icon-whale.svg);
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-    }
-}
-
-
-.lower-information__tab.is-active{
-    background-color: $accent-color;
-}
-
-.lower-information__tab.is-active span{
-    color: $white;
-    
-}
-
-.lower-information__tab.is-active span::before{
-    background: url(../images/common/icon-whale_active.svg);
-}
-
 .lower-information__cards{
     margin-top: rem(14);
 
@@ -83,3 +20,5 @@
         margin-top: rem(24);
     }
 }
+
+

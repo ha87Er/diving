@@ -1,0 +1,73 @@
+@use 'global' as *;
+
+.information-tabs{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(19);
+
+    @include mq('md'){
+        gap: rem(90);
+    }
+}
+
+.information-tabs__tab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $sub-color;
+    padding: rem(10) 0;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: all  0.3s ease;
+
+    @include mq('md'){
+        padding: rem(13) 0;
+    }
+}
+
+.information-tabs__tab span{
+    color: $accent-color;
+    font-size: rem(14);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    column-gap: rem(8);
+    
+    @include mq('lg'){
+        font-size: rem(24);
+    }
+}
+
+.information-tabs__tab svg{
+    display: none;
+
+    @include mq('md'){
+        width: rem(61);
+    }
+}
+
+// ホバースタイル
+.information-tabs__tab:hover{
+    background-color: $accent-color;
+
+    span{
+        color: $white;
+    }
+
+    path{
+        fill: $white;
+    }
+}
+
+//ボタンがアクティブになった時のスタイル
+.information-tabs__tab.is-active{
+    background-color: $accent-color;
+
+    path{
+        fill: $white;
+
+    }
+}
+
+.information-tabs__tab.is-active span{
+    color: $white;
+}

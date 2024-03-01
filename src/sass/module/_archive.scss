@@ -4,39 +4,41 @@
     text-align: center;
 }
 
-.archive__wrap{
+.archive__date-wrap{
     margin-top: rem(24);
 }
 
-.archive__list a,
-.archive__under-list a{
+.archive__year,
+.archive__month a{
     color: $accent-color;
     font-size: rem(24);
     font-weight: $normal;
     padding-left: rem(31);
     position: relative;
+    cursor: pointer;
 }
 
-.archive__under-lists{
-    text-indent: rem(29);
-}
-
-.archive__list a::before{
+.archive__year::before{
     content: "";
     width: rem(24);
     height: rem(24);
     position: absolute;
     top: 55%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) rotate(30deg);
     left: 0;
     background: url(../images/common/polygon.svg)no-repeat center center / contain;
 }
 
-.archive__under-list a{
+.archive__month-wrap{
+    text-indent: rem(29);
+    display: none;
+}
+
+.archive__month a{
     line-height: 1.65;
 }
 
-.archive__under-list a::before{
+.archive__month a::before{
     content: "";
     width: rem(24);
     height: rem(24);
@@ -45,4 +47,11 @@
     transform: rotate(-90deg);
     left: 0;
     background: url(../images/common/polygon.svg)no-repeat center center / contain;
+}
+
+.archive__data.is-open{
+    .archive__year::before{
+    transform: translateY(-50%) rotate(0deg);
+
+    }
 }

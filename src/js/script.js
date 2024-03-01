@@ -36,14 +36,10 @@ $(".js-drawer-close").on("click", function (e) {
   $(".js-hamburger").removeClass("is-active");
   $(".js-drawer").removeClass("is-active");
   $("body").removeClass("is-active");
-
-  // overflowとheightのスタイルを削除する
-  $("body").removeAttr("style");
+  $("body").removeAttr("style"); // overflowとheightのスタイルを削除する
 });
 
-
-
-//メインビジュアル　スライダー
+//メインビジュアル スライダー
 const mainVisualSwiper = new Swiper('.js-mv-swiper', {
     loop: true,
     effect: 'fade',  
@@ -56,7 +52,7 @@ const mainVisualSwiper = new Swiper('.js-mv-swiper', {
 
   });
 
-//キャンペーン　スライダー
+//キャンペーン スライダー
 const campaignSwiper = new Swiper(".js-campaign-swiper", {
     slidesPerView: 'auto', //スライドの枚数を自動調節
     allowTouchMove: true, // スワイプ有効
@@ -71,21 +67,38 @@ const campaignSwiper = new Swiper(".js-campaign-swiper", {
   });
 
 
-// topへ戻る
-jQuery('a[href^="#"]').on("click", function (e) {
-  e.preventDefault();
+// // topへ戻る
+// jQuery('a[href^="#"]').on("click", function (e) {
+//   e.preventDefault();
+//   const speed = 300;
+//   const id = jQuery(this).attr("href");
+//   const target = jQuery("#" == id ? "html" : id);
+//   const position = jQuery(target).offset().top;
+//   jQuery("html, body").animate(
+//     {
+//       scrollTop: position,
+//     },
+//     speed,
+//     "linear"
+//   );
+// });
+
+
+//スムーススクロール
+const header = $('.header');
+
+$('a[href^="#"]').on('click', function() {
+  const gap = header.outerHeight();
   const speed = 300;
-  const id = jQuery(this).attr("href");
-  const target = jQuery("#" == id ? "html" : id);
-  const position = jQuery(target).offset().top;
-  jQuery("html, body").animate(
-    {
-      scrollTop: position,
-    },
-    speed,
-    "linear"
-  );
+  const href = $(this).attr("href");
+
+  const target = $(href == "#" || href == "" ? "html" : href);
+  const position = target.offset().top - gap;
+  
+  $("html, body").animate({ scrollTop: position }, speed, "swing");
+  return false;
 });
+
 
 jQuery(window).on("scroll", function () {
   if (100 < jQuery(window).scrollTop()) {
@@ -170,90 +183,38 @@ $(document).ready(function() {
 });
 
 
-//タグ絞り込み キャンペーン
-$(function(){
-  var $btn = $('.tab-items [data-filter]'),
-      $list = $('.lower-campaign__cards [data-category]');
-
-  $btn.on('click', function() {
-    // クリックされた要素に is-active クラスを付与し、他の要素からは削除する
-    $btn.removeClass('is-active');
-    $(this).addClass('is-active');
-
-    var $btnCat = $(this).attr('data-filter'); //クリックした要素のdata-filter属性を取得
-
-    if ($btnCat == 'all') { //クリックして取得したdata-filterの値がallだったら
-      $list.show();
-    } else {//クリックして取得したdata-filterの値がall以外の場合
-       $list.hide().filter('[data-category = "' + $btnCat + '"]').show();
-    }
-    return false;
-  });
-});
-
-//タグ絞り込み ボイス
-$(function(){
-  var $btn = $('.tab-items [data-filter]'),
-      $list = $('.lower-voice__cards [data-category]');
-
-  $btn.on('click', function() {
-    // クリックされた要素に is-active クラスを付与し、他の要素からは削除する
-    $btn.removeClass('is-active');
-    $(this).addClass('is-active');
-
-    var $btnCat = $(this).attr('data-filter'); //クリックした要素のdata-filter属性を取得
-
-    if ($btnCat == 'all') { //クリックして取得したdata-filterの値がallだったら
-      $list.show();
-    } else {//クリックして取得したdata-filterの値がall以外の場合
-       $list.hide().filter('[data-category = "' + $btnCat + '"]').show();
-    }
-    return false;
-  });
-});
-
-//タグ絞り込み information
-$(function(){
-  var $btn = $('.lower-information__tab[data-filter]'),
-      $list = $('.lower-information__card[data-category]');
-
-  // 最初にすべてのカードを非表示にする
-  $list.hide();
-
-  // info-license を持ったカードを表示する
-  $list.filter('[data-category="info-license"]').show();
-
-  $btn.on('click', function() {
-    // クリックされた要素に is-active クラスを付与し、他の要素からは削除する
-    $btn.removeClass('is-active');
-    $(this).addClass('is-active');
-
-    var $btnCat = $(this).attr('data-filter'); //クリックした要素のdata-filter属性を取得
-
-    // クリックして取得したdata-filterの値に一致するカードを表示する
-    $list.hide().filter('[data-category="' + $btnCat + '"]').show();
-    
-    return false;
-  });
-});
-
-
 //モーダルウィンドウ
-jQuery(function ($) {
-  $(".js-modal-open").each(function () {
-      $(this).on("click", function (e) {
-          e.preventDefault();
-          var target = $(this).data("target");
-          var modal  = document.getElementById(target);
-          $(modal).fadeIn();
-          $("html,body").css("overflow", "hidden");
-      });
-  });
-  $(".js-modal-close").on("click", function () {
-      $(".js-modal").fadeOut();
-      $("html,body").css("overflow", "initial");
-  });
+$('.gallery img').click(function() {
+  // クリックされた画像の外側のHTMLを取得
+  var imageContainerHTML = $(this).parent().html();
+
+  // クリックされた画像のアスペクト比を取得
+  var aspectRatio = $(this).css('aspect-ratio');
+  
+  // モーダル内の画像を表示する要素を取得
+  var modalImageContainer = $('.gallery__modal .modal__img');
+  
+  // モーダル内の画像にクリックされた画像の外側のHTMLを設定
+  modalImageContainer.html(imageContainerHTML);
+
+  // モーダル内の画像にアスペクト比を設定
+  modalImageContainer.find('img').css('aspect-ratio', aspectRatio);
+
+  // モーダルを表示
+  $('.modal').css('display', 'block');
+
+  // bodyにoverflow: hidden;を設定
+  $('body').css('overflow', 'hidden');
 });
+
+$('.modal').click(function() {
+  // モーダルを非表示にする
+  $(this).css('display', 'none');
+  
+  // bodyからoverflow: hidden;を解除する
+  $('body').css('overflow', 'auto');
+});
+
 
 //tableスタイルの切り替え
 $(document).ready(function() {
@@ -287,5 +248,64 @@ jQuery(".js-accordion").on("click", function (e) {
   }
 });
 
+//日付のスライド
+jQuery(document).ready(function() {
+  // 最初の要素を開いた状態にする
+  jQuery(".archive__year:first").parent().addClass("is-open");
+  jQuery(".archive__year:first").next().slideDown();
+
+  // クリックしたときの処理
+  jQuery(".archive__year").on("click", function (e) {
+    e.preventDefault();
+
+    if (jQuery(this).parent().hasClass("is-open")) {
+      jQuery(this).parent().removeClass("is-open");
+      jQuery(this).next().slideUp();
+    } else {
+      jQuery(this).parent().addClass("is-open");
+      jQuery(this).next().slideDown();
+    }
+  });
 });
+
+//パラメーターの設定
+$(function() {
+  // パラメータ取得
+  function getParam(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    let regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+ 
+  // ページ読み込み時のタブ切り替え
+  let tabPram = ['ALL', 'tab1', 'tab2', 'tab3'];
+  let pram = getParam('active-tab');
+  if (pram && $.inArray(pram, tabPram) !== -1) {
+    $('.js-tab-cts,.js-tab-switch').removeClass('is-active');
+    $('[data-tab="' + pram + '"]').addClass('is-active');
+    if (pram === 'ALL') { // pram が ALL の場合は全てのカードを表示
+      $('.js-tab-cts').addClass('is-active').show(); // .show() を追加して要素を表示する
+    }
+  }
+ 
+  // ロード後のタブ切り替え
+  $('.js-tab-switch').on('click', function() {
+    let dataPram = $(this).data('tab');
+    $('.js-tab-cts,.js-tab-switch').removeClass('is-active');
+    $('[data-tab="' + dataPram + '"]').addClass('is-active');
+  });
+
+  // "ALL" ボタンがクリックされたときの処理
+  $('[data-tab="ALL"]').on('click', function() {
+    $('.js-tab-cts').addClass('is-active').show(); // すべてのカードを表示
+  });
+});
+
+
+});
+
 

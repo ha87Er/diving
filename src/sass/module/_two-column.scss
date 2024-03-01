@@ -1,18 +1,6 @@
 @use 'global' as *;
 
-.lower-blog__inner.inner{
-    max-width: calc(rem(600) + rem(15)*2);
-    margin:auto;
-    padding: 0 rem(15);
-
-    @include mq('md'){
-        max-width: calc(rem(1080) + rem(25)*2);
-        margin:auto;
-        padding: 0 rem(25);
-    }
-}
-
-.lower-blog__wrap{
+.two-column{
 
     @include mq('md'){
         display: flex;
@@ -20,7 +8,7 @@
     }
 }
 
-.lower-blog__content{
+.two-column__main{
 
     @include mq('md'){
         width: calc(100% - rem(380));
@@ -28,7 +16,7 @@
 }
 
 
-.lower-blog__side{
+.two-column__side{
     max-width: calc(rem(600) + rem(25)*2);
     margin: rem(80) auto 0;
     padding: 0 rem(25);
@@ -39,4 +27,3 @@
         padding: 0;
     }
 }
-

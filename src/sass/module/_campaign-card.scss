@@ -4,8 +4,13 @@
     display: flex;
     flex-direction: column;
     box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+    display: none;
 
+    &.is-active{
+        display: block;
+    }
 }
+
 
 .campaign-card__image{
     position: relative;

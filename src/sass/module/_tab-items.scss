@@ -7,11 +7,8 @@
     row-gap: rem(16);
 
     @include mq('md'){
-        max-width: rem(744);
-        width: 100%;
+        grid-template-columns: repeat(auto-fit, 10.125rem);
         gap: rem(32);
-        grid-template-columns: repeat(4, 1fr);
-
     }
 }
 
@@ -31,4 +28,10 @@
 .tab-items__tab.is-active{
     background-color: $accent-color;
     color: $white;
+}
+
+.tab-items__tab:hover{
+    background: $accent-color;
+    color: $white;
+    border-color: $accent-color;
 }

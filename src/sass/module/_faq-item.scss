@@ -14,6 +14,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 
     @include mq('md'){
         padding: rem(24) rem(40);
@@ -55,10 +56,14 @@
     }
 }
 
+.faq-item__toggle span:nth-child(2){
+    transform: rotate(90deg);
+}
+
 .faq-item.is-open {
 
     .faq-item__toggle span:nth-child(2){
-        transform: rotate(90deg);
+        transform: rotate(0deg);
     }
 
 }

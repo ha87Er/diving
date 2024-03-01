@@ -1,8 +1,17 @@
 @use 'global' as *;
 
 .information-card{
+    display: none;
+
+    &.is-active{
+        display: block;
+    }
+}
+
+.information-card__wrap{
     padding: rem(24);
     border: 1px solid $accent-color;
+
 
     @include mq('md'){
         display: flex;
@@ -10,6 +19,7 @@
         align-items: center;
         padding: rem(20) rem(24);
     }
+
 }
 
 .information-card__text-block,
