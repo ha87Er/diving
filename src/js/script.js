@@ -83,22 +83,36 @@ const campaignSwiper = new Swiper(".js-campaign-swiper", {
 //   );
 // });
 
-
-//スムーススクロール
-const header = $('.header');
-
-$('a[href^="#"]').on('click', function() {
-  const gap = header.outerHeight();
-  const speed = 300;
-  const href = $(this).attr("href");
-
-  const target = $(href == "#" || href == "" ? "html" : href);
-  const position = target.offset().top - gap;
-  
-  $("html, body").animate({ scrollTop: position }, speed, "swing");
-  return false;
+//スムーズスクロール
+$(function () {
+  var pageHash = window.location.hash;
+  if (pageHash) {
+    var scrollToElement = $('[data-id="' + pageHash + '"]');
+    if (!scrollToElement.length) return;
+    $(window).on('load', function () {
+      history.replaceState('', '', './');
+      var locationOffset = scrollToElement.offset().top;
+      var navigationBarHeight = $('.header').innerHeight();
+      locationOffset = locationOffset - navigationBarHeight - 65;
+      $('html, body').animate({
+        scrollTop: locationOffset
+      }, 300, 'swing');
+    });
+  }
 });
-
+$(function () {
+  $('a[href*="#"]').on('click', function () {
+    var scrollSpeed = 400;
+    var navigationHeight = $(".header").innerHeight();
+    var scrollToTarget = $(this.hash === '#' || this.hash === '' ? 'html' : this.hash);
+    if (!scrollToTarget.length) return;
+    var scrollPosition = scrollToTarget.offset().top - navigationHeight - 105;
+    $('html, body').animate({
+      scrollTop: scrollPosition
+    }, scrollSpeed, 'swing');
+    return false;
+  });
+});
 
 jQuery(window).on("scroll", function () {
   if (100 < jQuery(window).scrollTop()) {
@@ -292,12 +306,17 @@ $(function() {
     }
   }
  
-  // ロード後のタブ切り替え
-  $('.js-tab-switch').on('click', function() {
-    let dataPram = $(this).data('tab');
+// ロード後のタブ切り替え
+$('.js-tab-switch').on('click', function() {
+  let dataPram = $(this).data('tab');
+  if ($(this).hasClass('is-active')) { // クリックされたタブがすでにアクティブな場合
+    $('.js-tab-cts').removeClass('is-active').hide(); // カードを非表示にしてアクティブな状態を解除
+    $(this).removeClass('is-active'); // クリックされたタブからアクティブな状態を解除
+  } else {
     $('.js-tab-cts,.js-tab-switch').removeClass('is-active');
     $('[data-tab="' + dataPram + '"]').addClass('is-active');
-  });
+  }
+});
 
   // "ALL" ボタンがクリックされたときの処理
   $('[data-tab="ALL"]').on('click', function() {

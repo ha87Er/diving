@@ -42,6 +42,7 @@
 
     @include mq('md'){
         width: rem(61);
+        display: block;
     }
 }
 

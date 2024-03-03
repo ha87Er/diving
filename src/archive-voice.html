@@ -46,7 +46,7 @@
           <li class="header__nav-item"><a href="./page-about.html">About us<span>私たちについて</span></a></li>
           <li class="header__nav-item"><a href="./page-information.html">Information<span>ダイビング情報</span></a></li>
           <li class="header__nav-item"><a href="./home.html">Blog<span>ブログ</span></a></li>
-          <li class="header__nav-item"><a href="./archive-voice.html">Voice<span>お客様の声</span></a></li>
+          <li class="header__nav-item"><a href="./archive-voice.html?active-tab=ALL">Voice<span>お客様の声</span></a></li>
           <li class="header__nav-item"><a href="./page-price.html">Price<span>料金一覧</span></a></li>
           <li class="header__nav-item"><a href="./page-faq.html">FAQ<span>よくある質問</span></a></li>
           <li class="header__nav-item"><a href="./page-contact.html">Contact<span>おい問わ合せ</span></a></li>
@@ -66,8 +66,8 @@
                 <ul class="nav__items">
                   <li class="nav__item nav__item--bold"><a href="./archive-campaign.html?active-tab=ALL">キャンペーン</a></li>
                   <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab1">ライセンス取得</a></li>
-                  <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab3">貸切体験ダイビング</a></li>
-                  <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab2">ナイトダイビング</a></li>
+                  <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab3">体験ダイビング</a></li>
+                  <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab2">ファンダイビング</a></li>
                 </ul>
                 <ul class="nav__items">
                   <li class="nav__item nav__item--bold"><a href="./page-about.html">私たちについて</a></li>
@@ -88,7 +88,7 @@
             <div class="nav__right">
               <div class="nav__wrap">
                 <ul class="nav__items">
-                  <li class="nav__item nav__item--bold"><a href="./archive-voice.html">お客様の声</a></li>
+                  <li class="nav__item nav__item--bold"><a href="./archive-voice.html?active-tab=ALL">お客様の声</a></li>
                 </ul>
                 <ul class="nav__items">
                   <li class="nav__item nav__item--bold"><a href="./page-price.html">料金一覧</a></li>
@@ -138,13 +138,13 @@
   <div class="lower-voice layout-lower-voice">
     <div class="lower-voice__inner lower-inner inner">
       <div class="lower-voice__tab-wrap tab-items">
-        <button class="tab-items__tab is-active" data-filter="all">ALL</button>
-        <button class="tab-items__tab" data-filter="license">ライセンス講習</button>
-        <button class="tab-items__tab" data-filter="fan-diving">ファンダイビング</button>
-        <button class="tab-items__tab" data-filter="experience-diving">体験ダイビング</button>
+        <button class="tab-items__tab js-tab-switch" data-tab="ALL">ALL</button>
+        <button class="tab-items__tab js-tab-switch" data-tab="tab1">ライセンス講習</button>
+        <button class="tab-items__tab js-tab-switch" data-tab="tab2">ファンダイビング</button>
+        <button class="tab-items__tab js-tab-switch" data-tab="tab3">体験ダイビング</button>
       </div>
       <div class="lower-voice__cards voice-items voice-items--lower-voice">
-        <div class="voice-items__item voice-item" data-category="license">
+        <div class="voice-items__item voice-item js-tab-cts" data-tab="tab1">
           <div class="voice-item__head">
             <div class="voice-item__content">
               <div class="voice-item__meta">
@@ -163,7 +163,7 @@
               ここにテキストが入ります。ここにテキストが入ります。</p>
           </div>
         </div>
-        <div class="voice-items__item voice-item" data-category="fan-diving">
+        <div class="voice-items__item voice-item js-tab-cts" data-tab="tab2">
           <div class="voice-item__head">
             <div class="voice-item__content">
               <div class="voice-item__meta">
@@ -182,7 +182,7 @@
               ここにテキストが入ります。ここにテキストが入ります。</p>
           </div>
         </div>
-        <div class="voice-items__item voice-item" data-category="experience-diving">
+        <div class="voice-items__item voice-item js-tab-cts" data-tab="tab3">
           <div class="voice-item__head">
             <div class="voice-item__content">
               <div class="voice-item__meta">
@@ -201,7 +201,7 @@
               ここにテキストが入ります。ここにテキストが入ります。</p>
           </div>
         </div>
-        <div class="voice-items__item voice-item" data-category="experience-diving">
+        <div class="voice-items__item voice-item js-tab-cts" data-tab="tab3">
           <div class="voice-item__head">
             <div class="voice-item__content">
               <div class="voice-item__meta">
@@ -220,7 +220,7 @@
               ここにテキストが入ります。ここにテキストが入ります。</p>
           </div>
         </div>
-        <div class="voice-items__item voice-item" data-category="fan-diving">
+        <div class="voice-items__item voice-item js-tab-cts" data-tab="tab2">
           <div class="voice-item__head">
             <div class="voice-item__content">
               <div class="voice-item__meta">
@@ -239,7 +239,7 @@
               ここにテキストが入ります。ここにテキストが入ります。</p>
           </div>
         </div>
-        <div class="voice-items__item voice-item" data-category="license">
+        <div class="voice-items__item voice-item js-tab-cts" data-tab="tab1">
           <div class="voice-item__head">
             <div class="voice-item__content">
               <div class="voice-item__meta">
@@ -331,8 +331,8 @@
           <ul class="nav__items">
             <li class="nav__item nav__item--bold"><a href="./archive-campaign.html?active-tab=ALL">キャンペーン</a></li>
             <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab1">ライセンス取得</a></li>
-            <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab3">貸切体験ダイビング</a></li>
-            <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab2">ナイトダイビング</a></li>
+            <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab3">体験ダイビング</a></li>
+            <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab2">ファンダイビング</a></li>
           </ul>
           <ul class="nav__items">
             <li class="nav__item nav__item--bold"><a href="./page-about.html">私たちについて</a></li>
@@ -353,7 +353,7 @@
       <div class="nav__right">
         <div class="nav__wrap">
           <ul class="nav__items">
-            <li class="nav__item nav__item--bold"><a href="./archive-voice.html">お客様の声</a></li>
+            <li class="nav__item nav__item--bold"><a href="./archive-voice.html?active-tab=ALL">お客様の声</a></li>
           </ul>
           <ul class="nav__items">
             <li class="nav__item nav__item--bold"><a href="./page-price.html">料金一覧</a></li>

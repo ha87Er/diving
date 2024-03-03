@@ -35,7 +35,7 @@
 </head>
 <body>
 
-  <!-- <div id="loading" class="loading">
+  <div id="loading" class="loading">
     <div class="loading__title main-title">
       <div class="main-title__title main-title__title--green">DIVING</div>
       <p class="main-title__sub-title main-title__sub-title--green">into the ocean</p>
@@ -50,7 +50,7 @@
         <img src="./assets/images/common/mv-right_sp.jpg" alt="右半分：海で泳ぐかめ">
       </picture>
     </div>
-  </div> -->
+  </div>
 
   <header class="header layout-header js-header">
     <div class="header__inner">
@@ -63,7 +63,7 @@
           <li class="header__nav-item"><a href="./page-about.html">About us<span>私たちについて</span></a></li>
           <li class="header__nav-item"><a href="./page-information.html">Information<span>ダイビング情報</span></a></li>
           <li class="header__nav-item"><a href="./home.html">Blog<span>ブログ</span></a></li>
-          <li class="header__nav-item"><a href="./archive-voice.html">Voice<span>お客様の声</span></a></li>
+          <li class="header__nav-item"><a href="./archive-voice.html?active-tab=ALL">Voice<span>お客様の声</span></a></li>
           <li class="header__nav-item"><a href="./page-price.html">Price<span>料金一覧</span></a></li>
           <li class="header__nav-item"><a href="./page-faq.html">FAQ<span>よくある質問</span></a></li>
           <li class="header__nav-item"><a href="./page-contact.html">Contact<span>おい問わ合せ</span></a></li>
@@ -83,8 +83,8 @@
                 <ul class="nav__items">
                   <li class="nav__item nav__item--bold"><a href="./archive-campaign.html?active-tab=ALL">キャンペーン</a></li>
                   <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab1">ライセンス取得</a></li>
-                  <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab3">貸切体験ダイビング</a></li>
-                  <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab2">ナイトダイビング</a></li>
+                  <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab3">体験ダイビング</a></li>
+                  <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab2">ファンダイビング</a></li>
                 </ul>
                 <ul class="nav__items">
                   <li class="nav__item nav__item--bold"><a href="./page-about.html">私たちについて</a></li>
@@ -105,7 +105,7 @@
             <div class="nav__right">
               <div class="nav__wrap">
                 <ul class="nav__items">
-                  <li class="nav__item nav__item--bold"><a href="./archive-voice.html">お客様の声</a></li>
+                  <li class="nav__item nav__item--bold"><a href="./archive-voice.html?active-tab=ALL">お客様の声</a></li>
                 </ul>
                 <ul class="nav__items">
                   <li class="nav__item nav__item--bold"><a href="./page-price.html">料金一覧</a></li>
@@ -185,7 +185,7 @@
     </div>
     <div class="swiper campaign__swiper js-campaign-swiper">
       <div class="swiper-wrapper campaign__cards">
-        <div class="swiper-slide campaign__card campaign-card">
+        <div class="swiper-slide campaign__card campaign-card is-active">
           <div class="campaign-card__image">
             <img src="./assets/images/common/campaign_img1.jpg" alt="水槽に黄色と黒の縞模様の熱帯魚がたくさん泳いでいる">
           </div>
@@ -199,7 +199,7 @@
             </div>
           </div>
         </div>
-        <div class="swiper-slide campaign__card campaign-card">
+        <div class="swiper-slide campaign__card campaign-card is-active">
           <div class="campaign-card__image">
             <img src="./assets/images/common/campaign_img2.jpg" alt="山が見える透明度が高い綺麗な海に船が２隻浮かんでいる">
           </div>
@@ -213,7 +213,7 @@
             </div>
           </div>
         </div>
-        <div class="swiper-slide campaign__card campaign-card">
+        <div class="swiper-slide campaign__card campaign-card is-active">
           <div class="campaign-card__image">
             <img src="./assets/images/common/campaign_img3.jpg" alt="たくさんのクラゲが照明の暗い水槽を泳いでいる">
           </div>
@@ -227,7 +227,7 @@
             </div>
           </div>
         </div>
-        <div class="swiper-slide campaign__card campaign-card">
+        <div class="swiper-slide campaign__card campaign-card is-active">
           <div class="campaign-card__image">
             <img src="./assets/images/common/campaign_img4.jpg" alt="仲間たちとダイビングをする姿">
           </div>
@@ -367,7 +367,7 @@
       <h2 class="title__ja">お客様の声</h2>
     </div>
     <div class="voice__items voice-items">
-      <div class="voice-items__item voice-item">
+      <div class="voice-items__item voice-item is-active">
         <div class="voice-item__head">
           <div class="voice-item__content">
             <div class="voice-item__meta">
@@ -386,7 +386,7 @@
             ここにテキストが入ります。ここにテキストが入ります。</p>
         </div>
       </div>
-      <div class="voice-items__item voice-item">
+      <div class="voice-items__item voice-item is-active">
         <div class="voice-item__head">
           <div class="voice-item__content">
             <div class="voice-item__meta">
@@ -568,8 +568,8 @@
           <ul class="nav__items">
             <li class="nav__item nav__item--bold"><a href="./archive-campaign.html?active-tab=ALL">キャンペーン</a></li>
             <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab1">ライセンス取得</a></li>
-            <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab3">貸切体験ダイビング</a></li>
-            <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab2">ナイトダイビング</a></li>
+            <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab3">体験ダイビング</a></li>
+            <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab2">ファンダイビング</a></li>
           </ul>
           <ul class="nav__items">
             <li class="nav__item nav__item--bold"><a href="./page-about.html">私たちについて</a></li>
@@ -590,7 +590,7 @@
       <div class="nav__right">
         <div class="nav__wrap">
           <ul class="nav__items">
-            <li class="nav__item nav__item--bold"><a href="./archive-voice.html">お客様の声</a></li>
+            <li class="nav__item nav__item--bold"><a href="./archive-voice.html?active-tab=ALL">お客様の声</a></li>
           </ul>
           <ul class="nav__items">
             <li class="nav__item nav__item--bold"><a href="./page-price.html">料金一覧</a></li>

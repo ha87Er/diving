@@ -46,7 +46,7 @@
           <li class="header__nav-item"><a href="./page-about.html">About us<span>私たちについて</span></a></li>
           <li class="header__nav-item"><a href="./page-information.html">Information<span>ダイビング情報</span></a></li>
           <li class="header__nav-item"><a href="./home.html">Blog<span>ブログ</span></a></li>
-          <li class="header__nav-item"><a href="./archive-voice.html">Voice<span>お客様の声</span></a></li>
+          <li class="header__nav-item"><a href="./archive-voice.html?active-tab=ALL">Voice<span>お客様の声</span></a></li>
           <li class="header__nav-item"><a href="./page-price.html">Price<span>料金一覧</span></a></li>
           <li class="header__nav-item"><a href="./page-faq.html">FAQ<span>よくある質問</span></a></li>
           <li class="header__nav-item"><a href="./page-contact.html">Contact<span>おい問わ合せ</span></a></li>
@@ -67,7 +67,7 @@
                 <li class="nav__item nav__item--bold"><a href="./archive-campaign.html?active-tab=ALL">キャンペーン</a></li>
                 <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab1">ライセンス取得</a></li>
                 <li class="nav__item"><a href="./archive-campaign.htm?active-tab=tab3">貸切体験ダイビング</a></li>
-                <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab2">ナイトダイビング</a></li>
+                <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab2">ファンダイビング</a></li>
               </ul>
               <ul class="nav__items">
                 <li class="nav__item nav__item--bold"><a href="./page-about.html">私たちについて</a></li>
@@ -88,14 +88,14 @@
           <div class="nav__right">
             <div class="nav__wrap">
               <ul class="nav__items">
-                <li class="nav__item nav__item--bold"><a href="./archive-voice.html">お客様の声</a></li>
+                <li class="nav__item nav__item--bold"><a href="./archive-voice.html?active-tab=ALL">お客様の声</a></li>
               </ul>
               <ul class="nav__items">
                 <li class="nav__item nav__item--bold"><a href="./page-price.html">料金一覧</a></li>
-                <li class="nav__item"><a href="./page-price.html#licence">ライセンス講習</a></li>
-                <li class="nav__item"><a href="./page-price.html#experience">体験ダイビング</a></li>
-                <li class="nav__item"><a href="./page-price.html#fan">ファンダイビング</a></li>
-                <li class="nav__item"><a href="./page-price.html#special">スペシャルダイビング</a></li>
+                <li class="nav__item"><a href="#licence">ライセンス講習</a></li>
+                <li class="nav__item"><a href="#experience">体験ダイビング</a></li>
+                <li class="nav__item"><a href="#fan">ファンダイビング</a></li>
+                <li class="nav__item"><a href="#special">スペシャルダイビング</a></li>
               </ul>
             </div>
             <div class="nav__wrap">
@@ -139,7 +139,7 @@
   <div class="lower-price__inner lower-inner inner">
     <div class="lower-price__items">
       <!-- ライセンス講習 -->
-      <table id="licence" class="lower-price__table table">
+      <table data-id="#licence" id="licence" class="lower-price__table table">
         <tbody class="table__body">
           <tr>
             <th class="table__title">
@@ -161,7 +161,7 @@
         </tbody>
       </table>
       <!-- 体験ダイビング -->
-      <table id="experience" class="lower-price__table table">
+      <table data-id="#experience" id="experience" class="lower-price__table table">
         <tbody class="table__body">
           <tr>
             <th class="table__title">
@@ -187,7 +187,7 @@
         </tbody>
       </table>
       <!-- ファンダイビング -->
-      <table id="fan" class="lower-price__table table">
+      <table data-id="#fan" id="fan" class="lower-price__table table">
         <tbody class="table__body">
           <tr>
             <th class="table__title">
@@ -213,7 +213,7 @@
         </tbody>
       </table>
       <!-- スペシャルダイビング -->
-      <table id="special" class="lower-price__table table">
+      <table data-id="#special" id="special" class="lower-price__table table">
         <tbody class="table__body">
           <tr>
             <th class="table__title">
@@ -296,8 +296,8 @@
           <ul class="nav__items">
             <li class="nav__item nav__item--bold"><a href="./archive-campaign.html?active-tab=ALL">キャンペーン</a></li>
             <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab1">ライセンス取得</a></li>
-            <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab3">貸切体験ダイビング</a></li>
-            <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab2">ナイトダイビング</a></li>
+            <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab3">体験ダイビング</a></li>
+            <li class="nav__item"><a href="./archive-campaign.html?active-tab=tab2">ファンダイビング</a></li>
           </ul>
           <ul class="nav__items">
             <li class="nav__item nav__item--bold"><a href="./page-about.html">私たちについて</a></li>
@@ -318,14 +318,14 @@
       <div class="nav__right">
         <div class="nav__wrap">
           <ul class="nav__items">
-            <li class="nav__item nav__item--bold"><a href="./archive-voice.html">お客様の声</a></li>
+            <li class="nav__item nav__item--bold"><a href="./archive-voice.html?active-tab=ALL">お客様の声</a></li>
           </ul>
           <ul class="nav__items">
             <li class="nav__item nav__item--bold"><a href="./page-price.html">料金一覧</a></li>
-            <li class="nav__item"><a href="./page-price.html#licence">ライセンス講習</a></li>
-            <li class="nav__item"><a href="./page-price.html#experience">体験ダイビング</a></li>
-            <li class="nav__item"><a href="./page-price.html#fan">ファンダイビング</a></li>
-            <li class="nav__item"><a href="./page-price.html#special">スペシャルダイビング</a></li>
+            <li class="nav__item"><a href="#licence">ライセンス講習</a></li>
+            <li class="nav__item"><a href="#experience">体験ダイビング</a></li>
+            <li class="nav__item"><a href="#fan">ファンダイビング</a></li>
+            <li class="nav__item"><a href="#special">スペシャルダイビング</a></li>
           </ul>
         </div>
         <div class="nav__wrap">
